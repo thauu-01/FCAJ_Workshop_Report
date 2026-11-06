@@ -1,58 +1,43 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-11-08
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu mô hình điện toán không máy chủ (Serverless Computing) và tư duy kiến trúc hướng sự kiện (Event-Driven Architecture).
+* Làm chủ dịch vụ tính toán Serverless AWS Lambda: Khởi tạo function, cấu hình execution roles, biến môi trường và xử lý runtime.
+* Xây dựng các cổng giao tiếp API với Amazon API Gateway (REST APIs, HTTP APIs, CORS, Authorizers).
+* Làm chủ các dịch vụ truyền tin bất đồng bộ: Amazon Simple Queue Service (SQS) và Amazon Simple Notification Service (SNS).
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các công việc triển khai trong tuần:
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+| Thứ | Công việc |
+| :---: | :--- |
+| 2 | - Tìm hiểu nền tảng của Serverless: Lợi ích về vận hành (Zero server management), khả năng tự động mở rộng theo yêu cầu và mô hình Pay-as-you-go.<br>- Khám phá AWS Lambda: Vòng đời function, Memory allocation, Timeout, Concurrency limits (Reserved vs Provisioned).<br>- Cấu hình IAM Execution Role cấp quyền truy cập tối thiểu cho Lambda function. |
+| 3 | - Viết Lambda Function bằng Node.js / Python thực hiện xử lý dữ liệu và tương tác với Amazon DynamoDB.<br>- Khảo sát Amazon CloudWatch Logs cho Lambda để phân tích execution duration, memory used và gỡ lỗi runtime.<br>- Tìm hiểu khái niệm Cold Start và các phương pháp tối ưu hóa tốc độ khởi động hàm. |
+| 4 | - Nghiên cứu Amazon API Gateway: Phân biệt REST API và HTTP API.<br>- Cấu hình API Resources, Methods (GET, POST, PUT, DELETE) và Lambda Proxy Integration.<br>- Thiết lập API Stages (dev, prod), Stage Variables và kích hoạt CORS để kết nối với Frontend. |
+| 5 | - Tìm hiểu cơ chế truyền tin phi tập trung (Decoupling Architecture): So sánh Pub/Sub (SNS) và Message Queuing (SQS).<br>- Nghiên cứu Amazon SQS: Standard Queue vs FIFO Queue, Visibility Timeout, Dead-Letter Queue (DLQ).<br>- Nghiên cứu Amazon SNS: Topics, Subscriptions (Email, SMS, Lambda, SQS), Fan-out Pattern. |
+| 6 | - **Thực hành triển khai Serverless Microservice:** Xây dựng ứng dụng đặt hàng (Order Processing System).<br>- API Gateway tiếp nhận đơn hàng -> Lambda xử lý -> ghi vào DynamoDB -> xuất message tới SNS Topic -> Fan-out sang SQS Queues để gửi email và xử lý thanh toán bất đồng bộ. |
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+---
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Bài thực hành Hands-on Lab trọng tâm:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Xây dựng Serverless Event-Driven Order Processing API với Lambda, API Gateway & SQS/SNS
+Trong bài thực hành này, tôi đã thiết kế và triển khai một hệ thống xử lý đơn hàng hoàn toàn không máy chủ (Serverless). Hệ thống sử dụng Amazon API Gateway làm điểm tiếp nhận request HTTP POST `/orders`, kích hoạt AWS Lambda function để validate dữ liệu và lưu vào Amazon DynamoDB. Sau khi lưu thành công, Lambda gửi một thông điệp sự kiện tới Amazon SNS Topic, từ đó áp dụng mô hình Fan-out để phân phối song song tới Amazon SQS Queue phục vụ tác vụ gửi email hóa đơn và cập nhật tồn kho.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+---
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+### Kết quả và thành tựu đạt được:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm vững nguyên lý hoạt động của điện toán Serverless và tư duy thiết kế hệ thống hướng sự kiện.
+* Phát triển, triển khai và tối ưu hóa hiệu năng cho các hàm xử lý dữ liệu với AWS Lambda.
+* Xây dựng thành công cổng giao diện RESTful API hoàn chỉnh trên Amazon API Gateway tích hợp Lambda Proxy.
+* Làm chủ kiến trúc phân tán tách rời (Decoupled Architecture) với mẫu thiết kế SNS Fan-out sang SQS.
+* Xử lý lỗi và cơ chế thử lại (Retry) thông minh sử dụng Dead-Letter Queues (DLQ).

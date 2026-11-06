@@ -1,57 +1,43 @@
 ---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-10-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Get acquainted with the team, mentors, and the First Cloud AI Journey (FCAJ) development roadmap.
+* Grasp core Cloud Computing fundamentals and the AWS Global Infrastructure (Regions, AZs, Edge Locations).
+* Create and harden an AWS Free Tier account with AWS IAM following the Principle of Least Privilege.
+* Install, configure AWS CLI v2, and gain hands-on proficiency with Amazon Elastic Compute Cloud (EC2).
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 1 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Meet with FCAJ members and mentor.<br>- Review internship regulations, workplace culture, and the 12-week development roadmap.<br>- Setup development environment: VS Code, Git, and terminal utilities. |
+| 3 | - Learn Cloud Computing foundations and cloud service models (IaaS, PaaS, SaaS).<br>- Study the AWS Shared Responsibility Model.<br>- Explore AWS Global Infrastructure: Regions, Availability Zones (AZs), and Edge Locations. |
+| 4 | - Register an AWS Free Tier account and enable Multi-Factor Authentication (MFA) on the Root Account.<br>- Study AWS Identity and Access Management (IAM): Users, Groups, Policies, and Roles.<br>- Create a dedicated IAM Admin user and enforce the Principle of Least Privilege. |
+| 5 | - Install AWS CLI v2 on the local workstation.<br>- Configure Access Key ID, Secret Access Key, default region, and output format via `aws configure`.<br>- Execute essential CLI commands: verify caller identity (`sts get-caller-identity`), describe regions and instances. |
+| 6 | - Study Amazon EC2 architecture: Instance Types (t2/t3.micro), AMIs, EBS storage, Key Pairs.<br>- Configure Security Groups restricting SSH (port 22) to trusted CIDR.<br>- Launch an Amazon Linux EC2 instance and establish a secure SSH session. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Secure AWS Account Hardening & Amazon EC2 Deployment
+In this foundational hands-on laboratory, I secured the AWS Root Account by activating Virtual MFA, constructed an IAM Admin Group with granular policies, and completely decommissioned root access keys. Subsequently, I configured AWS CLI v2 on the local environment and provisioned an Amazon Linux 2023 EC2 instance with an encrypted gp3 EBS volume, associated SSH Key Pairs, and validated remote terminal connectivity.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered cloud delivery models and the AWS Shared Responsibility framework.
+* Hardened the AWS Root account with MFA and implemented IAM best practices compliant with CIS benchmarks.
+* Attained practical fluency in managing AWS infrastructure via both Management Console and AWS CLI v2.
+* Successfully provisioned, configured, and remotely accessed Amazon EC2 virtual servers.
+* Established a dependable engineering baseline for advanced cloud networking in Week 2.

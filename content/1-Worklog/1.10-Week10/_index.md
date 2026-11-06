@@ -1,57 +1,43 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-12-09
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore multi-layered Defense-in-Depth security adhering to the AWS Well-Architected Security Pillar.
+* Master cryptographic operations with AWS Key Management Service (KMS) and credential rotation via Secrets Manager.
+* Protect internet-facing applications against web exploits using AWS WAF (Web Application Firewall).
+* Enable continuous threat detection with Amazon GuardDuty and consolidate security posture using AWS Security Hub.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 10 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Study the 7 design principles for security in the cloud.<br>- Apply advanced IAM hardening: IAM Access Analyzer, enforcing MFA via JSON Policy condition keys (`aws:MultiFactorAuthPresent`).<br>- Explore IAM Permission Boundaries and Service Control Policies (SCPs) within AWS Organizations. |
+| 3 | - Explore AWS Key Management Service (KMS): Customer Managed Keys (CMKs), AWS Managed Keys, and Envelope Encryption.<br>- Formulate granular Key Policies scoping cryptographic grants.<br>- Enforce Encryption at Rest across S3 buckets, EBS volumes, and RDS databases.<br>- Study AWS Secrets Manager: Secret caching, automated database password rotation via managed Lambda functions. |
+| 4 | - Examine AWS WAF (Web Application Firewall): Web ACLs, Managed Rule Groups, and custom rule development.<br>- Deploy AWS Managed Rules: Core Rule Set (CRS), SQL database inspection, and Known Bad Inputs.<br>- Configure Rate-based rules protecting endpoints against application-layer DDoS and credential stuffing.<br>- Associate Web ACLs with Application Load Balancers and CloudFront distributions. |
+| 5 | - Study Amazon GuardDuty: Machine learning-driven threat detection analyzing VPC Flow Logs, DNS query logs, and CloudTrail management events.<br>- Enable AWS Security Hub: Aggregating findings across GuardDuty, IAM Access Analyzer, and AWS Inspector.<br>- Measure security compliance postures against CIS AWS Foundations Benchmark standards. |
+| 6 | - **Security Defense Validation Lab:** Inject synthetic malicious payloads (e.g. SQL Injection strings \`OR 1=1\`) verifying immediate HTTP 403 blocks by AWS WAF.<br>- Trigger automated secret rotation in Secrets Manager and confirm zero connection dropouts.<br>- Review synthesized findings and remediate compliance warnings in the Security Hub dashboard. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Enforcing Deep Defense Security with AWS KMS, Secrets Manager, AWS WAF & Security Hub
+In this rigorous hands-on laboratory, I established an end-to-end security perimeter across the infrastructure. All stored assets and database volumes were protected using custom AWS KMS CMKs with strict key usage policies. Production database secrets were managed and automatically rotated by AWS Secrets Manager. At the edge, an AWS WAF Web ACL actively protected the Application Load Balancer against OWASP Top 10 vulnerabilities, while Amazon GuardDuty and Security Hub provided 24/7 posture surveillance.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered multi-layered Defense-in-Depth design methodologies aligned with AWS Well-Architected standards.
+* Implemented enterprise-grade encryption at rest and in transit using AWS KMS Envelope Encryption.
+* Successfully automated application database secret lifecycle and credentials rotation via AWS Secrets Manager.
+* Shielded internet-facing web assets against OWASP Top 10 exploits and DDoS attacks utilizing AWS WAF.
+* Operated Amazon GuardDuty and AWS Security Hub to enforce regulatory compliance and threat remediation.

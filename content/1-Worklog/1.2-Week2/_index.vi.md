@@ -1,59 +1,43 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+date: 2026-10-09
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững kiến trúc mạng ảo đám mây với Amazon Virtual Private Cloud (VPC).
+* Hiểu và phân bổ dải địa chỉ IP qua kỹ thuật CIDR Block và phân tách Public / Private Subnets.
+* Thiết lập định tuyến với Internet Gateway, NAT Gateway và Route Tables.
+* Làm chủ các cơ chế bảo mật mạng đa lớp với Security Groups (Stateful) và Network ACLs (Stateless).
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các công việc triển khai trong tuần:
 
-### Kết quả đạt được tuần 2:
+| Thứ | Công việc |
+| :---: | :--- |
+| 2 | - Nghiên cứu kiến trúc Amazon VPC, dải địa chỉ mạng riêng RFC 1918 và cơ chế tính toán CIDR (`10.0.0.0/16`).<br>- Phân tích khái niệm Public Subnet, Private Subnet và tính sẵn sàng cao (High Availability) qua Multi-AZ.<br>- Tìm hiểu cấu trúc Route Table và cơ chế định tuyến nội bộ (Local Route). |
+| 3 | - Tìm hiểu Internet Gateway (IGW) và cơ chế gắn kết với VPC.<br>- Cấu hình Route Table cho Public Subnet hướng lưu lượng ra Internet (`0.0.0.0/0 -> igw`).<br>- Nghiên cứu NAT Gateway trong Public Subnet để cho phép Private Subnet kết nối Internet một chiều. |
+| 4 | - So sánh cơ chế hoạt động của Security Group (Lớp 4 - Stateful, áp dụng cấp Instance) và Network ACL (Lớp 3/4 - Stateless, áp dụng cấp Subnet).<br>- Thiết lập quy tắc Inbound/Outbound Rules kiểm soát chặt chẽ các cổng HTTP (80), HTTPS (443) và SSH (22). |
+| 5 | - Tìm hiểu địa chỉ Elastic IP (EIP) và Elastic Network Interface (ENI).<br>- Gắn và điều chuyển EIP linh hoạt giữa các EC2 instances khi cần bảo trì hoặc failover.<br>- Nắm rõ các lưu ý về chi phí khi duy trì Elastic IP không gắn với instance đang hoạt động. |
+| 6 | - **Thực hành chuyên sâu:** Xây dựng Custom VPC 2-Tier trên 2 Availability Zones (AZ-a & AZ-b).<br>- Khởi tạo Bastion Host tại Public Subnet và máy chủ nội bộ trong Private Subnet.<br>- Kiểm tra đường truyền SSH qua Bastion Host và xác thực khả năng tải bản cập nhật từ Private Subnet qua NAT Gateway. |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Bài thực hành Hands-on Lab trọng tâm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Thiết kế & Triển khai kiến trúc mạng Custom Multi-Tier VPC
+Trong bài lab này, tôi đã khởi tạo một Custom VPC (`10.0.0.0/16`) bao gồm 2 Public Subnets và 2 Private Subnets trải đều trên 2 Availability Zones. Tôi cấu hình 1 Internet Gateway cho Public Route Table và 1 NAT Gateway cho Private Route Table. Hệ thống máy chủ Web được đặt tại Public Subnet trong khi Database Server được cô lập an toàn trong Private Subnet, cho phép quản trị an toàn thông qua mô hình Bastion Host (Jump Box).
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+---
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kết quả và thành tựu đạt được:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu sâu kiến trúc mạng đám mây chuẩn Enterprise với mô hình mạng đa vùng sẵn sàng cao.
+* Thiết kế và triển khai chính xác sơ đồ mạng VPC với đầy đủ IGW, NAT Gateway và Route Tables.
+* Phân định rạch ròi và kết hợp hiệu quả giữa Security Group (Stateful) và Network ACL (Stateless).
+* Thành thạo kỹ năng thiết lập Bastion Host để truy cập bảo mật vào các vùng mạng nội bộ (Private).
+* Nắm vững kỹ năng xử lý sự cố (troubleshooting) kết nối mạng, định tuyến và phân giải DNS trong VPC.

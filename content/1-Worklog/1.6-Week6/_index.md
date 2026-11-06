@@ -1,57 +1,43 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-11-08
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore the principles of Serverless Computing and Event-Driven Architecture (EDA).
+* Master AWS Lambda serverless execution: Function authoring, execution roles, environment parameters, and concurrency.
+* Build and expose serverless RESTful APIs using Amazon API Gateway (Resources, Methods, Stages, CORS).
+* Implement asynchronous enterprise messaging paradigms utilizing Amazon SQS and Amazon SNS.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 6 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Study Serverless Computing foundations: Zero infrastructure overhead, instantaneous elasticity, and pay-per-use economics.<br>- Explore AWS Lambda: Invocations, memory sizing, timeouts, and execution concurrency models (Reserved vs Provisioned).<br>- Author granular IAM Execution Roles enforcing least privilege access for Lambda workloads. |
+| 3 | - Develop Lambda functions in Node.js/Python executing CRUD logic interacting with Amazon DynamoDB.<br>- Analyze Amazon CloudWatch Logs for Lambda metrics: billed duration, memory consumption, and runtime stack traces.<br>- Examine Lambda Cold Starts and techniques for initialization optimization. |
+| 4 | - Study Amazon API Gateway: Comparing REST APIs against low-latency HTTP APIs.<br>- Configure API Resources, HTTP Methods (GET, POST, PUT, DELETE), and Lambda Proxy Integrations.<br>- Implement deployment stages (dev, prod), stage variables, and manage CORS headers for web client integrations. |
+| 5 | - Examine decoupled distributed messaging patterns: Comparing Pub/Sub (SNS) against Point-to-Point Queues (SQS).<br>- Study Amazon SQS: Standard vs FIFO queues, Visibility Timeouts, and Dead-Letter Queues (DLQ).<br>- Study Amazon SNS: Topics, Subscriptions (Email, Lambda, SQS), and the Fan-out pattern. |
+| 6 | - **Comprehensive Serverless Microservice Lab:** Construct an Event-Driven Order Processing System.<br>- API Gateway accepts orders -> Lambda validates payload -> persists state into DynamoDB -> publishes event to SNS Topic -> Fan-out to SQS queues for asynchronous processing. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Building an Event-Driven Serverless Order Processing API with Lambda, API Gateway & SQS/SNS
+In this technical project, I constructed a completely serverless order pipeline. Amazon API Gateway served as the front-door HTTP endpoint handling `/orders` requests via Lambda Proxy Integration. An AWS Lambda function ingested and validated payloads, wrote state to Amazon DynamoDB, and emitted order events into an Amazon SNS Topic. Using the SNS Fan-out pattern, messages were routed concurrently into Amazon SQS queues for billing ingestion and notifications.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered serverless design methodologies and event-driven decoupled architecture standards.
+* Authored and tuned production-ready AWS Lambda functions with optimized memory footprints and IAM role scoping.
+* Engineered secure, scalable RESTful API interfaces with Amazon API Gateway and CORS configuration.
+* Successfully implemented high-throughput asynchronous messaging utilizing SNS-to-SQS Fan-out architectures.
+* Configured fault tolerance and failed message recovery pipelines leveraging Dead-Letter Queues (DLQ).

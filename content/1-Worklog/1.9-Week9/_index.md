@@ -1,57 +1,43 @@
 ---
 title: "Week 9 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-12-01
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore DevOps practices, Continuous Integration (CI), and Continuous Deployment/Delivery (CD) principles.
+* Master the AWS Developer Tools suite: AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline.
+* Author declarative build scripts (`buildspec.yml`) and deployment lifecycle hooks (`appspec.yml`).
+* Build a production-grade automated CI/CD pipeline bridging source code commits to live application deployments.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 9 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Study DevOps culture and CI/CD mechanics: Automated testing, delivery velocity, and human intervention reduction.<br>- Survey the AWS Developer Tools ecosystem and benchmark against alternatives (GitHub Actions, Jenkins, GitLab CI). |
+| 3 | - Examine AWS CodeCommit: Secure Git repository hosting, IAM policy scoping, and credential helper setups.<br>- Study AWS CodeBuild: Managed ephemeral build container environments, artifact caching, and test reporting.<br>- Author structured `buildspec.yml` files configuring `install`, `pre_build`, `build`, and `post_build` phases. |
+| 4 | - Study AWS CodeDeploy: Deployment Groups, targets, and Deployment Configurations (AllAtOnce, HalfAtATime, OneAtATime).<br>- Compare deployment topologies: In-Place updates vs zero-downtime Blue/Green deployments.<br>- Define `appspec.yml` specifications and lifecycle hooks (`BeforeInstall`, `AfterInstall`, `ApplicationStart`, `ValidateService`). |
+| 5 | - Study AWS CodePipeline orchestration: Pipeline Stages (Source, Build, Test, Deploy), triggers, and S3 artifact buckets.<br>- Integrate Amazon SNS notifications broadcasting pipeline state transitions (Success, Failed).<br>- Implement Manual Approval action gates prior to triggering production deployments. |
+| 6 | - **Comprehensive CI/CD Pipeline Implementation:** Build an automated delivery pipeline for a containerized application.<br>- Git push trigger -> CodePipeline ingests source -> CodeBuild executes tests and compiles Docker image to ECR -> CodeDeploy executes rolling rollout to ECS Fargate.<br>- Validate automated rollback triggers upon synthetic smoke test failures. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Building an Automated End-to-End CI/CD Pipeline with AWS CodePipeline & CodeBuild
+In this technical implementation, I constructed an end-to-end continuous delivery pipeline powered by AWS CodePipeline. Upon detecting Git commits to `main`, CodePipeline retrieved the source revision and forwarded the workspace to AWS CodeBuild. CodeBuild executed automated unit tests, compiled application assets, built a multi-stage Docker image tagged with the commit SHA, and pushed it to Amazon ECR. The pipeline concluded by triggering an ECS rolling deployment cutover without downtime.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Attained thorough mastery of cloud-native CI/CD automation and DevOps operational models on AWS.
+* Authored and tuned complex build specifications (`buildspec.yml`) and deployment lifecycles (`appspec.yml`).
+* Acquired actionable expertise in choosing appropriate release strategies (In-Place vs Blue/Green).
+* Successfully orchestrated AWS CodeCommit, CodeBuild, CodeDeploy, and CodePipeline into a cohesive pipeline.
+* Configured automated quality gates, approval stages, and automated recovery rollback policies.

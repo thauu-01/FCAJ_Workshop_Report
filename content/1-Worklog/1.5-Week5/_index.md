@@ -1,57 +1,43 @@
 ---
 title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-11-01
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore infrastructure observability, logging, and automated alerting using Amazon CloudWatch.
+* Master Elastic Load Balancing (ELB) architectures, focusing on Layer-7 Application Load Balancer (ALB).
+* Learn automated horizontal scaling strategies with Amazon EC2 Auto Scaling Groups (ASG).
+* Design and deploy a resilient, fault-tolerant, self-healing web architecture across Multiple Availability Zones.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 5 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Explore Amazon CloudWatch foundations: Metrics, Logs, Log Groups, Log Streams, and Dashboards.<br>- Analyze CloudWatch Alarm state machines (OK, ALARM, INSUFFICIENT_DATA).<br>- Integrate Amazon Simple Notification Service (SNS) for immediate email notifications upon alarm triggers. |
+| 3 | - Configure CloudWatch Agent on EC2 instances to harvest detailed system metrics (RAM utilization, disk metrics).<br>- Construct CloudWatch Alarms monitoring CPU thresholds exceeding 70% over consecutive evaluation periods.<br>- Build an operations dashboard consolidating comprehensive infrastructure health telemetry. |
+| 4 | - Study Elastic Load Balancing: Application Load Balancer (Layer 7), Network Load Balancer (Layer 4), and Gateway Load Balancers.<br>- Examine Target Groups, Health Checks, and Listener routing rules (path-based and host-based routing).<br>- Configure an Application Load Balancer distributing incoming traffic across compute nodes. |
+| 5 | - Study Amazon EC2 Auto Scaling: Launch Templates specifying AMI, instance sizes, user data, and security controls.<br>- Configure Multi-AZ Auto Scaling Groups (ASG) ensuring high availability and fault isolation.<br>- Evaluate scaling policy designs: Target Tracking, Step Scaling, Simple Scaling, and Scheduled actions. |
+| 6 | - **End-to-End Hands-on Integration:** Attach Auto Scaling Group to ALB Target Groups.<br>- Execute synthetic CPU load generation via `stress` utility on running EC2 nodes.<br>- Observe automated scale-out events, target registrations, and subsequent scale-in stabilization. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Architecting a Self-Healing High-Availability Web Tier with ALB & Auto Scaling
+In this advanced laboratory, I engineered a highly available, self-healing compute topology. The system placed an Application Load Balancer in public subnets routing requests into an Auto Scaling Group spanning two Availability Zones. Upon executing synthetic stress benchmarks driving CPU utilization past 70%, CloudWatch Alarms dynamically instructed the Auto Scaling Group to provision additional instances, seamlessly pass health checks, and distribute the incoming load without downtime.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered Amazon CloudWatch observability, custom metrics ingestion, and centralized operational dashboards.
+* Configured real-time incident alerting pipelines utilizing CloudWatch Alarms and Amazon SNS topics.
+* Gained hands-on proficiency with Application Load Balancer configurations, target health checks, and listener rules.
+* Successfully deployed resilient Auto Scaling Groups driven by modern Launch Templates and target tracking policies.
+* Acquired practical verification skills for chaos resilience, synthetic load testing, and self-healing validation.

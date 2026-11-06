@@ -1,57 +1,43 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-12-24
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Synthesize and demonstrate the comprehensive theoretical knowledge and hands-on skills acquired across the 12-week FCAJ journey.
+* Architect, provision, and deploy a production-grade 3-Tier Enterprise Cloud Capstone Project.
+* Conduct a thorough architectural evaluation against the 6 pillars of the AWS Well-Architected Framework.
+* Finalize internship documentation, present the capstone defense to mentors, and outline future Cloud Architect milestones.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 12 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Consolidate mastery across AWS disciplines: Networking (VPC), Compute (EC2, ECS, Fargate), Databases (RDS, DynamoDB, ElastiCache), Storage (S3, EBS), Security (IAM, KMS, WAF), Observability (CloudWatch), and DevOps (CI/CD).<br>- Formulate business specifications, data flow diagrams, and architectural blueprints for the final Capstone Project. |
+| 3 | - **Capstone Infrastructure & Security Tier Provisioning:**<br>&emsp;+ Provision a Multi-AZ custom VPC (2 Public Subnets, 2 Private App Subnets, 2 Private DB Subnets, 1 IGW, 2 NAT Gateways).<br>&emsp;+ Formulate least-privilege Security Groups and IAM execution roles.<br>&emsp;+ Implement AWS KMS customer managed keys for pervasive data encryption at rest. |
+| 4 | - **Capstone Application & Data Tier Implementation:**<br>&emsp;+ Deploy an Amazon RDS MySQL Multi-AZ cluster and an ElastiCache Redis cluster inside private DB subnets.<br>&emsp;+ Containerize application microservices and register images within Amazon ECR.<br>&emsp;+ Deploy services to Amazon ECS Fargate fronted by an Application Load Balancer and Auto Scaling.<br>&emsp;+ Host frontend static assets in Amazon S3 distributed globally via Amazon CloudFront with ACM SSL certificates. |
+| 5 | - **System Stress Testing & Well-Architected Review:**<br>&emsp;+ Conduct synthetic load tests, validating automatic container scale-out and simulating database failover.<br>&emsp;+ Attach an AWS WAF Web ACL to the ALB and configure consolidated CloudWatch operational dashboards and alarms.<br>&emsp;+ Utilize the AWS Well-Architected Tool to review the workload against all 6 pillars and document architectural trade-offs. |
+| 6 | - **Program Conclusion & Final Capstone Defense:**<br>&emsp;+ Audit and polish the 12-week worklog documentation, lab guides, and GitHub project codebase.<br>&emsp;+ Deliver the final Capstone Project presentation and defense before FCAJ mentors and technical review boards.<br>&emsp;+ Receive evaluations, celebrate program graduation, and outline certification goals for the AWS Certified Solutions Architect pathway. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Deploying an Enterprise 3-Tier Capstone Architecture & AWS Well-Architected Review
+In this culminating milestone, I designed and deployed an enterprise-grade 3-Tier cloud application. The solution synthesized Amazon CloudFront + S3 (Presentation Tier), an Application Load Balancer + Amazon ECS Fargate Auto Scaling (Application Tier), and Amazon RDS MySQL Multi-AZ + ElastiCache Redis (Database Tier) within an isolated Multi-AZ custom VPC. The deployment was hardened by AWS WAF and KMS, automated via a continuous CodePipeline CI/CD engine, and audited against the 6 pillars of the AWS Well-Architected Framework.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully architected and deployed an enterprise-grade cloud solution orchestrating over 15 distinct AWS services.
+* Mastered infrastructure auditing methodologies aligned with the 6 pillars of the AWS Well-Architected Framework.
+* Flawlessly synthesized advanced networking, serverless container orchestration, database clustering, and security automation.
+* Demonstrated elite operational troubleshooting, performance optimization, and architectural decision-making competencies.
+* Successfully graduated from the 12-week First Cloud AI Journey (FCAJ) internship, laying a world-class foundation for becoming a Cloud Solutions Architect.

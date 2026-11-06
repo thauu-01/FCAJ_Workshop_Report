@@ -1,58 +1,43 @@
 ---
 title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+date: 2026-12-24
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tổng hợp toàn bộ kiến thức và kỹ năng thực hành tích lũy được trong 12 tuần thực tập tại chương trình FCAJ.
+* Thiết kế và triển khai một đồ án ứng dụng Cloud hoàn chỉnh (Capstone Project) chuẩn kiến trúc 3-Tier Enterprise.
+* Thực hiện đánh giá toàn diện hệ thống theo 6 trụ cột của AWS Well-Architected Framework.
+* Hoàn thiện tài liệu báo cáo thực tập, tổ chức thuyết trình bảo vệ đồ án và định hướng lộ trình phát triển Cloud Engineer.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các công việc triển khai trong tuần:
 
-### Kết quả đạt được tuần 12:
+| Thứ | Công việc |
+| :---: | :--- |
+| 2 | - Hệ thống hóa toàn bộ kiến thức các mảng dịch vụ AWS đã học: Networking (VPC), Compute (EC2, ECS, Fargate), Database (RDS, DynamoDB, ElastiCache), Storage (S3, EBS), Security (IAM, KMS, WAF), Monitoring (CloudWatch), DevOps (CI/CD).<br>- Lên ý tưởng, phân tích yêu cầu nghiệp vụ và phác thảo sơ đồ kiến trúc tổng thể cho đồ án tốt nghiệp Capstone Project. |
+| 3 | - **Triển khai tầng Mạng & Bảo mật cho Capstone Project:**<br>&emsp;+ Khởi tạo Custom VPC Multi-AZ (2 Public Subnets, 2 Private App Subnets, 2 Private DB Subnets, 1 IGW, 2 NAT Gateways).<br>&emsp;+ Thiết lập Security Groups nhiều lớp và phân quyền IAM Roles theo nguyên tắc Least Privilege.<br>&emsp;+ Cấu hình AWS KMS để mã hóa toàn bộ dữ liệu lưu trữ. |
+| 4 | - **Triển khai tầng Ứng dụng & Cơ sở dữ liệu:**<br>&emsp;+ Triển khai Amazon RDS MySQL Multi-AZ và cụm đệm ElastiCache Redis trong Private DB Subnets.<br>&emsp;+ Đóng gói ứng dụng web microservices thành Docker container và đẩy lên Amazon ECR.<br>&emsp;+ Triển khai dịch vụ lên Amazon ECS Fargate tích hợp Application Load Balancer và Auto Scaling.<br>&emsp;+ Lưu trữ tài nguyên tĩnh trên Amazon S3 và phân phối qua Amazon CloudFront CDN kèm chứng chỉ ACM SSL. |
+| 5 | - **Kiểm thử hệ thống & Đánh giá Well-Architected:**<br>&emsp;+ Thực hiện kiểm thử tải (Load Testing), kiểm tra cơ chế Auto Scaling và mô phỏng failover database.<br>&emsp;+ Tích hợp AWS WAF bảo vệ ALB và cấu hình CloudWatch Dashboard, Alarms giám sát toàn diện.<br>&emsp;+ Sử dụng công cụ AWS Well-Architected Tool để rà soát kiến trúc theo 6 trụ cột và ghi nhận các điểm cải tiến. |
+| 6 | - **Tổng kết chương trình & Báo cáo tốt nghiệp:**<br>&emsp;+ Rà soát và hoàn thiện toàn bộ tài liệu báo cáo thực tập, nhật ký công việc (Worklog 12 tuần) và mã nguồn trên GitHub.<br>&emsp;+ Thuyết trình bảo vệ đồ án Capstone trước Hội đồng đánh giá và Mentor chương trình FCAJ.<br>&emsp;+ Nhận xét, đánh giá kết quả từ Mentor và đề ra kế hoạch ôn luyện các chứng chỉ AWS Certified Solutions Architect. |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Bài thực hành Hands-on Lab trọng tâm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Triển khai Đồ án Capstone 3-Tier Enterprise & Đánh giá AWS Well-Architected Framework
+Trong tuần cuối cùng, tôi đã thiết kế và triển khai thành công một giải pháp Cloud hoàn chỉnh đạt chuẩn doanh nghiệp (Enterprise 3-Tier Cloud Solution). Hệ thống kết hợp đầy đủ: CloudFront + S3 (Presentation Tier), Application Load Balancer + Amazon ECS Fargate Auto Scaling (Application Tier), và Amazon RDS MySQL Multi-AZ + ElastiCache (Database Tier) trong một Custom VPC cô lập chặt chẽ. Hệ thống được bảo vệ bởi AWS WAF và KMS, tự động hóa cập nhật mã nguồn bằng CI/CD CodePipeline và giám sát tập trung bởi CloudWatch. Tôi đã sử dụng công cụ AWS Well-Architected Tool để rà soát và tối ưu toàn diện đồ án.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+---
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kết quả và thành tựu đạt được:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Tự thiết kế và triển khai thành công một giải pháp Cloud hoàn chỉnh quy mô Enterprise tích hợp hơn 15 dịch vụ AWS.
+* Làm chủ phương pháp đánh giá và chuẩn hóa kiến trúc hạ tầng theo 6 trụ cột của AWS Well-Architected Framework.
+* Vận dụng nhuần nhuyễn các kỹ năng về Mạng (VPC), Điện toán (Fargate), Cơ sở dữ liệu (RDS Multi-AZ), Bảo mật (WAF/KMS) và Tự động hóa (CI/CD).
+* Nâng cao vượt bậc tư duy giải quyết vấn đề, khả năng xử lý sự cố (troubleshooting) và phân tích tối ưu chi phí trong môi trường thực tế.
+* Hoàn thành xuất sắc toàn bộ chương trình thực tập 12 tuần của First Cloud AI Journey (FCAJ), tạo tiền đề vững chắc trên con đường trở thành Cloud Solutions Architect.

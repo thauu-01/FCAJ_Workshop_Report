@@ -1,59 +1,43 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-10-16
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm chủ dịch vụ lưu trữ đối tượng Amazon Simple Storage Service (S3).
+* Triển khai Static Website Hosting, quản lý Bucket Policies, CORS và Versioning trên S3.
+* Tìm hiểu hệ thống phân giải tên miền toàn cầu Amazon Route 53 và các chiến lược định tuyến.
+* Tăng tốc độ truyền tải nội dung toàn cầu và bảo mật với Amazon CloudFront CDN kết hợp AWS Certificate Manager (ACM).
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các công việc triển khai trong tuần:
 
-### Kết quả đạt được tuần 3:
+| Thứ | Công việc |
+| :---: | :--- |
+| 2 | - Nghiên cứu Amazon S3: Cấu trúc Bucket/Object, khóa định danh (Key), metadata.<br>- Phân tích các lớp lưu trữ (S3 Storage Classes): Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier Instant/Flexible/Deep Archive.<br>- Cấu hình S3 Lifecycle Rules để tự động chuyển đổi lớp lưu trữ và tối ưu hóa chi phí. |
+| 3 | - Thực hành cấu hình S3 Static Website Hosting (index.html, error.html).<br>- Tắt Block Public Access và thiết lập Bucket Policy JSON cho phép truy xuất công khai an toàn.<br>- Kích hoạt tính năng S3 Versioning và Server-Side Encryption (SSE-S3, SSE-KMS). |
+| 4 | - Tìm hiểu Amazon Route 53: Khái niệm Hosted Zones (Public vs Private), Domain Registration.<br>- Phân biệt các bản ghi DNS: A, AAAA, CNAME, ALIAS Records.<br>- Khảo sát các chính sách định tuyến (Routing Policies): Simple, Weighted, Latency, Failover, Geolocation. |
+| 5 | - Tìm hiểu mạng lưới phân phối nội dung Amazon CloudFront (CDN): Edge Locations, Regional Edge Caches.<br>- Cấu hình CloudFront Distribution trỏ đến S3 Origin.<br>- Áp dụng Origin Access Control (OAC) để khóa hoàn toàn quyền đọc trực tiếp từ S3, buộc người dùng truy cập qua CDN. |
+| 6 | - **Thực hành tích hợp toàn diện:** Khởi tạo chứng chỉ SSL/TLS miễn phí với AWS Certificate Manager (ACM).<br>- Gắn tên miền tùy chỉnh vào CloudFront Distribution qua Route 53 Alias Record.<br>- Xác thực phân phối HTTPS tốc độ cao trên toàn cầu, kiểm tra cơ chế Cache Invalidation khi cập nhật mã nguồn. |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Bài thực hành Hands-on Lab trọng tâm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Triển khai Static Website toàn cầu tốc độ cao với S3, CloudFront & Route 53
+Trong bài thực hành này, tôi đã lưu trữ trang web tĩnh lên Amazon S3, kích hoạt Versioning và mã hóa SSE-S3. Sau đó, tôi cấu hình Amazon CloudFront Distribution với Origin Access Control (OAC) để bảo mật tuyệt đối cho bucket (chặn toàn bộ truy cập public trực tiếp vào S3). Cuối cùng, tôi tích hợp Route 53 và chứng chỉ SSL từ AWS Certificate Manager (ACM) để cung cấp trải nghiệm duyệt web HTTPS an toàn, tốc độ phản hồi cực nhanh từ các Edge Location gần nhất.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+---
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kết quả và thành tựu đạt được:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm vững kiến trúc lưu trữ đối tượng S3, cơ chế phân lớp lưu trữ và quản trị vòng đời dữ liệu Lifecycle Policies.
+* Thành thạo cấu hình phân quyền dữ liệu S3 với Bucket Policies, CORS và kiểm soát truy cập công khai.
+* Hiểu sâu cơ chế hoạt động của DNS toàn cầu và cấu hình các bản ghi Route 53 Alias tối ưu.
+* Triển khai thành công CDN CloudFront kết hợp OAC và chứng chỉ ACM giúp tăng tốc độ tải trang và bảo mật HTTPS.
+* Hiểu rõ phương thức vô hiệu hóa bộ nhớ đệm (Cache Invalidation) khi triển khai phiên bản web mới.

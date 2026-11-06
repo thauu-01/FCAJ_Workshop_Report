@@ -1,59 +1,43 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-10-24
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu các giải pháp cơ sở dữ liệu trên AWS: RDBMS quan hệ, NoSQL và In-Memory Caching.
+* Làm chủ dịch vụ cơ sở dữ liệu quan hệ Amazon RDS (MySQL/PostgreSQL) với kiến trúc Multi-AZ và Read Replicas.
+* Tìm hiểu cơ sở dữ liệu NoSQL phi quan hệ siêu tốc Amazon DynamoDB với mô hình Key-Value và Document.
+* Khám phá giải pháp bộ nhớ đệm Amazon ElastiCache (Redis) nhằm tối ưu độ trễ cho tầng dữ liệu.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các công việc triển khai trong tuần:
 
-### Kết quả đạt được tuần 4:
+| Thứ | Công việc |
+| :---: | :--- |
+| 2 | - Nghiên cứu Amazon Relational Database Service (RDS): Các database engines được hỗ trợ, DB Instance classes.<br>- Cấu hình DB Subnet Groups trải rộng trên các Private Subnets của ít nhất 2 Availability Zones.<br>- Phân tích cơ chế sao lưu tự động (Automated Backups), Retention Period và Point-In-Time Recovery (PITR). |
+| 3 | - Phân tích chuyên sâu kiến trúc RDS Multi-AZ phục vụ High Availability (đồng bộ sang Standby DB) vs Read Replicas phục vụ mở rộng đọc (bất đồng bộ).<br>- Khởi chạy một RDS MySQL instance trong Private Subnet và cấu hình Security Group chỉ chấp nhận kết nối từ Application Server. |
+| 4 | - Tìm hiểu cơ sở dữ liệu NoSQL phân tán Amazon DynamoDB: Tables, Items, Attributes.<br>- Thiết kế khóa chính: Partition Key (HASH) và Composite Key (HASH + RANGE).<br>- Phân tích các chế độ tính toán dung lượng: On-Demand Capacity vs Provisioned Capacity Mode.<br>- Nghiên cứu chỉ mục phụ: Local Secondary Indexes (LSI) và Global Secondary Indexes (GSI). |
+| 5 | - Tìm hiểu dịch vụ In-Memory Cache Amazon ElastiCache: So sánh Redis (hỗ trợ data structures, clustering, persistence) và Memcached (đơn giản, multi-threading).<br>- Khảo sát các chiến lược Caching phổ biến: Cache-Aside (Lazy Loading) và Write-Through.<br>- Đánh giá kiến trúc giảm tải cho cơ sở dữ liệu quan hệ bằng tầng đệm Redis. |
+| 6 | - **Thực hành:** Kết nối từ máy chủ EC2 vào RDS MySQL để thực hiện tạo Schema, Index và truy vấn dữ liệu.<br>- Tạo bảng DynamoDB qua AWS CLI, chèn dữ liệu JSON và truy vấn theo Partition Key và GSI.<br>- Thực hiện kiểm tra thời gian đáp ứng giữa RDS và DynamoDB. |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Bài thực hành Hands-on Lab trọng tâm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Triển khai Amazon RDS MySQL Multi-AZ & Quản lý dữ liệu NoSQL với DynamoDB
+Trong bài lab tuần này, tôi đã tạo DB Subnet Group trên 2 Private Subnets và triển khai một Amazon RDS MySQL instance với cấu hình Multi-AZ để đảm bảo khả năng tự động chuyển đổi dự phòng (failover). Tôi kết nối an toàn từ EC2 thông qua MySQL client, tạo database và kiểm tra snapshot tự động. Tiếp đó, tôi thiết kế bảng dữ liệu DynamoDB quản lý thông tin phiên làm việc, thiết lập GSI để tối ưu hóa truy vấn và đánh giá độ trễ milisecond của NoSQL.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+---
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kết quả và thành tựu đạt được:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu rõ sự khác biệt giữa các dịch vụ cơ sở dữ liệu trên AWS và chọn đúng dịch vụ cho từng bài toán nghiệp vụ.
+* Triển khai thành công Amazon RDS Multi-AZ trong mạng Private an toàn, bảo mật thông tin xác thực.
+* Làm chủ kỹ thuật thiết kế khóa Partition Key, Sort Key và chỉ mục GSI trên Amazon DynamoDB.
+* Nắm vững nguyên lý hoạt động của tầng đệm In-Memory ElastiCache và các chiến lược Caching.
+* Tích hợp thành thạo ứng dụng với cả hai mô hình lưu trữ quan hệ (RDBMS) và NoSQL trên AWS.

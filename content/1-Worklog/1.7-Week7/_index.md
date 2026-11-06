@@ -1,57 +1,43 @@
 ---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-11-16
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand and apply Infrastructure as Code (IaC) paradigms in modern cloud engineering.
+* Master declarative cloud provisioning with AWS CloudFormation (JSON/YAML, Parameters, Resources, Outputs, Intrinsic Functions).
+* Learn the AWS Cloud Development Kit (CDK) to define cloud infrastructure using expressive programming languages.
+* Eliminate SSH bastion dependencies and secure instance management using AWS Systems Manager (SSM).
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 7 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Study Infrastructure as Code (IaC) principles: Repeatability, version control, automated change auditing, and human error mitigation.<br>- Dissect AWS CloudFormation template sections: Parameters, Mappings, Conditions, Resources, and Outputs.<br>- Understand the CloudFormation stack lifecycle and preview infrastructural diffs using Change Sets. |
+| 3 | - Author a modular CloudFormation template (YAML) orchestrating a complete VPC topology: Subnets, Route Tables, and Gateways.<br>- Apply intrinsic functions: `Ref`, `!Sub`, `!GetAtt`, `!Join`, and `!Select`.<br>- Execute stack provisioning and updates, testing automated rollbacks upon synthesized resource deployment failures. |
+| 4 | - Explore AWS Cloud Development Kit (CDK): Architecture of Apps, Stacks, and L1/L2/L3 Constructs.<br>- Compare declarative YAML specifications against programmatic infrastructure definitions (TypeScript/Python).<br>- Master essential CDK CLI workflows: `cdk init`, `cdk synth`, `cdk diff`, and `cdk deploy`. |
+| 5 | - Investigate AWS Systems Manager (SSM) suite: SSM Agent, Session Manager, Parameter Store, and Run Command.<br>- Attach IAM roles with the `AmazonSSMManagedInstanceCore` policy to EC2 instances.<br>- Test keyless, zero-open-port administrative terminal access via SSM Session Manager directly in the browser. |
+| 6 | - **Comprehensive IaC & Systems Management Lab:** Provision a multi-tier application stack via AWS CDK.<br>- Securely inject database credentials and app configs utilizing SSM Parameter Store (SecureString with KMS encryption).<br>- Execute remote fleet software updates across EC2 nodes using Systems Manager Run Command. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Automated Cloud Provisioning with CloudFormation/CDK & Keyless Operations via SSM
+In this technical project, I encoded cloud infrastructure into reusable code utilizing AWS CloudFormation and AWS CDK (TypeScript). The automated deployment provisioned an entire isolated VPC network along with compute tiers. For fleet administration, I integrated AWS Systems Manager Session Manager, completely closing inbound port 22 on all Security Groups while enabling audited, encrypted browser-based shell access and managing application configurations via SSM Parameter Store.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered Infrastructure as Code principles and git-based infrastructure lifecycle management.
+* Authored and deployed production CloudFormation templates featuring dynamic parameterization and intrinsic functions.
+* Gained hands-on competency developing reusable infrastructure constructs using the AWS CDK in TypeScript.
+* Eliminated traditional SSH attack vectors by transitioning completely to AWS Systems Manager Session Manager.
+* Implemented secure centralized configuration management leveraging encrypted SSM Parameter Store values.

@@ -1,57 +1,43 @@
 ---
 title: "Week 11 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-12-17
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore enterprise business continuity, centralized data protection, and Disaster Recovery (DR) strategies.
+* Master centralized lifecycle backup orchestration with AWS Backup (Plans, Vaults, Cross-Region replication).
+* Study cloud disaster recovery topologies: Backup & Restore, Pilot Light, Warm Standby, and Multi-Site Active/Active.
+* Attain operational competence in cloud financial governance: AWS Cost Explorer, AWS Budgets, and AWS Trusted Advisor.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 11 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Analyze foundational Disaster Recovery metrics: Recovery Time Objective (RTO) and Recovery Point Objective (RPO).<br>- Evaluate 4 cloud DR architectural patterns: Backup & Restore, Pilot Light, Warm Standby, and Multi-Site Active/Active.<br>- Balance trade-offs between implementation costs, architectural complexity, and RTO/RPO targets. |
+| 3 | - Study AWS Backup centralized management: Backup Plans, Backup Rules, Vaults, and Vault Lock policies.<br>- Configure automated daily/weekly backup schedules covering Amazon EC2, EBS, RDS, DynamoDB, and S3.<br>- Define lifecycle transitions moving recovery points to cold storage after 30 days and expiring after 365 days.<br>- Configure Cross-Region Backup replication to an auxiliary secondary region for regional disaster survivability. |
+| 4 | - Explore AWS Cost Management tools: Billing Dashboard and Cost Allocation Tags (Environment, Project, Owner).<br>- Leverage AWS Cost Explorer to dissect historical cost patterns, usage trends, and forecast upcoming monthly commitments.<br>- Isolate data transfer expenses, inter-AZ network fees, and service-specific cost drivers. |
+| 5 | - Configure financial guardrails in AWS Budgets: Establish monthly recurring cost budgets.<br>- Configure intelligent alerting thresholds notifying stakeholders when actual spending hits 80% or forecasted spending breaches 100%.<br>- Evaluate long-term commitment savings models: Compute Savings Plans, EC2 Instance Savings Plans, and Reserved Instances (RI). |
+| 6 | - **DR Restoration & Cost Optimization Practice:** Execute simulated DR drills restoring an EC2 instance and RDS database from AWS Backup recovery points.<br>- Execute full AWS Trusted Advisor inspections spanning all 5 pillars (Cost, Performance, Security, Fault Tolerance, Limits).<br>- Identify and eliminate orphaned zombie resources: Unattached EBS volumes and idle unassociated Elastic IPs. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Automating Enterprise Backups with AWS Backup & Financial Governance with AWS Budgets
+In this technical project, I centralized enterprise data protection by authoring an AWS Backup Plan with automated daily schedules and cross-region replication to a secondary region. I executed disaster recovery drills, verifying that compute and database instances could be seamlessly restored from recovery points within defined RTO windows. Concurrently, I enacted cost governance by enforcing Cost Allocation Tags, deploying automated threshold alarms via AWS Budgets, and purging orphaned EBS volumes and unused Elastic IPs.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered enterprise Disaster Recovery design principles, optimizing critical RTO and RPO benchmarks.
+* Centralized automated backup lifecycles and cross-region disaster replication via AWS Backup.
+* Validated operational resilience by successfully executing end-to-end data recovery drills from cold recovery points.
+* Implemented proactive cloud financial management using AWS Cost Explorer and threshold alerting via AWS Budgets.
+* Leveraged AWS Trusted Advisor intelligence to rightsize resources and eliminate unutilized cloud spending.

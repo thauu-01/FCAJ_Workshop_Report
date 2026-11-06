@@ -1,57 +1,43 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-11-24
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore containerization principles and master Docker: Dockerfile authoring, layer caching, and multi-stage builds.
+* Secure and maintain container repositories with Amazon Elastic Container Registry (ECR) and image vulnerability scanning.
+* Study Amazon Elastic Container Service (ECS) orchestration concepts: Clusters, Task Definitions, and Services.
+* Deploy production container workloads on serverless AWS Fargate integrated with Application Load Balancers.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Carried Out This Week:
 
-### Week 8 Achievements:
+| Day | Task |
+| :---: | :--- |
+| 2 | - Contrast Containers (shared OS kernel, lightweight, instant startup) against traditional Virtual Machines.<br>- Dissect Docker architecture: Docker Daemon, Images, Containers, and Dockerfile directives (`FROM`, `WORKDIR`, `COPY`, `RUN`, `CMD`).<br>- Author production Dockerfiles applying multi-stage build patterns for minimal image footprints. |
+| 3 | - Explore Amazon Elastic Container Registry (ECR): Private Repositories, Image Tagging, and KMS Encryption.<br>- Authenticate local Docker daemon to AWS ECR via `aws ecr get-login-password`.<br>- Build, tag, and push container images into Amazon ECR.<br>- Enable Enhanced Image Scanning to automatically inspect images for Common Vulnerabilities and Exposures (CVEs). |
+| 4 | - Study Amazon Elastic Container Service (ECS): Comparing EC2 Launch Type against serverless AWS Fargate.<br>- Author ECS Task Definitions: Resource allocations (vCPU/RAM), container port bindings, Task Roles, and Task Execution Roles.<br>- Examine ECS Services: Maintaining desired task counts, service discovery, and rolling update strategies. |
+| 5 | - Initialize an ECS Cluster and launch a multi-task ECS Service using the AWS Fargate launch type.<br>- Integrate the ECS Service with an Application Load Balancer to accept incoming HTTP/HTTPS traffic.<br>- Configure ALB Target Groups and define healthy threshold parameters for container task endpoints. |
+| 6 | - **Release Cycle Hands-on:** Modify application source code, rebuild image version 2.0, and push to ECR.<br>- Trigger an ECS Service rolling update with updated task revisions.<br>- Observe zero-downtime traffic cutover managed by the ALB as old tasks deregister and new tasks pass health checks. |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Core Hands-on Lab & Practice:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Dockerizing Applications & Running Serverless Microservices on Amazon ECS Fargate
+In this technical project, I containerized a full-stack web application using multi-stage Dockerfiles and pushed the secured artifacts into Amazon ECR. I orchestrated the workload using Amazon ECS on top of AWS Fargate serverless infrastructure, removing all underlying virtual machine administration. The service was fronted by an Application Load Balancer, and I verified that deploying updated image versions resulted in automated zero-downtime rolling updates.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Key Achievements & Learning Outcomes:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered containerization engineering with optimized multi-stage Docker build pipelines.
+* Implemented secure container lifecycle management, KMS encryption, and automated vulnerability scanning on ECR.
+* Attained deep expertise in Amazon ECS orchestration, contrasting EC2 and serverless AWS Fargate launch types.
+* Successfully deployed high-availability container microservices backed by Application Load Balancers.
+* Demonstrated seamless zero-downtime rolling deployments for cloud-native containerized applications.

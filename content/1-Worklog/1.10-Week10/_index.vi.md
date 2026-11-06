@@ -1,59 +1,43 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-12-09
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu kiến trúc bảo mật đa lớp (Defense-in-Depth) theo tiêu chuẩn AWS Well-Architected Security Pillar.
+* Làm chủ dịch vụ mã hóa dữ liệu AWS Key Management Service (KMS) và quản lý bí mật với AWS Secrets Manager.
+* Bảo vệ ứng dụng web trước các cuộc tấn công mạng phổ biến với tường lửa AWS WAF (Web Application Firewall).
+* Phát hiện các mối đe dọa an ninh tự động với Amazon GuardDuty và quản trị tuân thủ an toàn với AWS Security Hub.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Các công việc triển khai trong tuần:
 
-### Kết quả đạt được tuần 10:
+| Thứ | Công việc |
+| :---: | :--- |
+| 2 | - Nghiên cứu 7 nguyên tắc thiết kế bảo mật trên Cloud của AWS.<br>- Áp dụng IAM Best Practices nâng cao: Phân tích quyền với IAM Access Analyzer, thực thi MFA bắt buộc qua Condition Keys trong JSON Policy.<br>- Tìm hiểu IAM Permission Boundaries và Service Control Policies (SCP) trong môi trường AWS Organizations. |
+| 3 | - Tìm hiểu AWS Key Management Service (KMS): Khái niệm Customer Managed Keys (CMK), AWS Managed Keys, Envelope Encryption.<br>- Cấu hình Key Policies phân quyền mã hóa/giải mã.<br>- Áp dụng mã hóa dữ liệu nghỉ (Encryption at Rest) cho S3 Buckets, EBS Volumes và RDS Instances.<br>- Nghiên cứu AWS Secrets Manager: Lưu trữ thông tin đăng nhập DB, cấu hình tự động xoay vòng mật khẩu (Automatic Rotation via Lambda). |
+| 4 | - Khám phá tường lửa tầng ứng dụng AWS WAF (Web Application Firewall): Web ACLs, Rule Groups, Rules.<br>- Kích hoạt AWS Managed Rules: Core Rule Set (CRS), SQL Injection Rule Set, Known Bad Inputs.<br>- Cấu hình Rate-based Rules chống tấn công từ chối dịch vụ (DDoS tầng ứng dụng) và brute-force login.<br>- Gắn Web ACL vào Application Load Balancer và CloudFront. |
+| 5 | - Nghiên cứu Amazon GuardDuty: Dịch vụ phát hiện mối đe dọa thông minh sử dụng Machine Learning phân tích dữ liệu từ VPC Flow Logs, DNS Query Logs, CloudTrail Events.<br>- Kích hoạt AWS Security Hub: Tổng hợp các phát hiện bảo mật từ GuardDuty, IAM Access Analyzer, Inspector.<br>- Đánh giá mức độ tuân thủ theo tiêu chuẩn CIS AWS Foundations Benchmark và AWS Foundational Security Best Practices. |
+| 6 | - **Thực hành kiểm thử phòng thủ đa lớp:** Gửi các request độc hại (chứa SQL injection payload \`OR 1=1\`) tới ALB và kiểm tra AWS WAF chặn đứng request với mã lỗi HTTP 403 Forbidden.<br>- Thực hiện xoay vòng mật khẩu database tự động với Secrets Manager và kiểm tra ứng dụng vẫn kết nối thông suốt.<br>- Phân tích báo cáo phát hiện và khắc phục các lỗ hổng trên bảng điều khiển Security Hub. |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Bài thực hành Hands-on Lab trọng tâm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Thiết lập bảo vệ đa lớp với AWS KMS, Secrets Manager, AWS WAF & Security Hub
+Trong bài thực hành này, tôi đã triển khai chiến lược bảo mật toàn diện cho hệ thống. Toàn bộ cơ sở dữ liệu và ổ đĩa được mã hóa bằng khóa tùy chỉnh AWS KMS CMK. Thông tin mật khẩu database được lưu trong AWS Secrets Manager và thiết lập cơ chế tự động xoay vòng định kỳ. Ở lớp ngoài cùng, tôi đã cấu hình AWS WAF Web ACL gắn trực tiếp vào Application Load Balancer để ngăn chặn các cuộc tấn công web theo OWASP Top 10 (SQLi, XSS) và kích hoạt Amazon GuardDuty cùng AWS Security Hub để giám sát tuân thủ an toàn liên tục.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+---
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kết quả và thành tựu đạt được:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Làm chủ kiến trúc bảo mật Defense-in-Depth và các nguyên tắc bảo mật chuẩn AWS Well-Architected.
+* Thành thạo mã hóa dữ liệu nghỉ (at-rest) và dữ liệu truyền tải (in-transit) với AWS KMS Envelope Encryption.
+* Triển khai thành công quản lý và tự động xoay vòng thông tin xác thực với AWS Secrets Manager.
+* Bảo vệ thành công hệ thống trước các cuộc tấn công web nguy hiểm nhờ tường lửa AWS WAF và Rate-limiting.
+* Ứng dụng Amazon GuardDuty và AWS Security Hub để theo dõi an ninh và đánh giá tuân thủ tự động.
