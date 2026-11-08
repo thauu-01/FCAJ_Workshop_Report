@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 2: Triển khai Docker trên Amazon ECS & AWS Fargate"
 date: 2026-11-24
 weight: 2
@@ -7,6 +7,8 @@ pre: " <b> 3.2. </b> "
 ---
 
 # Triển khai ứng dụng Docker trên AWS với Amazon ECS và AWS Fargate
+
+> 🔗 **Bài viết đã đăng trên cộng đồng AWS Study Group:** [Xem bài viết gốc trên Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2323062025125423/)
 
 Công nghệ container hóa với **Docker** đã trở thành tiêu chuẩn vàng trong quy trình phát triển phần mềm hiện đại, cho phép đóng gói toàn bộ mã nguồn ứng dụng cùng môi trường thực thi, thư viện phụ thuộc vào một image thống nhất, đảm bảo tính nhất quán từ môi trường cục bộ đến máy chủ thử nghiệm.
 
@@ -116,6 +118,6 @@ Mô hình triển khai container với **Amazon ECS và AWS Fargate** mang lại
 * [AWS Documentation - Amazon Elastic Container Service (ECS) Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 * [AWS Documentation - Getting Started with Amazon ECS using AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html)
 * [AWS Documentation - Amazon ECS Task Networking for Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-task-networking.html)
-* [AWS Prescriptive Guidance - Best practices for Amazon ECS and AWS Fargate](https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-modernizing-applications-amazon-ecs/)
 
 **Hashtags:** `#AWS` `#AmazonECS` `#AWSFargate` `#Docker` `#AmazonECR` `#CloudComputing` `#DevOps` `#awsstudygroup` `#FCAJ`
+

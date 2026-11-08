@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 2: Deploying Docker on Amazon ECS & AWS Fargate"
 date: 2026-11-24
 weight: 2
@@ -7,6 +7,8 @@ pre: " <b> 3.2. </b> "
 ---
 
 # Deploying Docker Applications on AWS with Amazon ECS and AWS Fargate
+
+> 🔗 **Published on AWS Study Group Community:** [View original Facebook post](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2323062025125423/)
 
 Containerization with **Docker** has established itself as the gold standard in modern software engineering. It packages application source code, system binaries, dependencies, and configuration files into an immutable image, ensuring complete consistency from a developer's local laptop to staging and production environments.
 
@@ -116,6 +118,6 @@ Deploying containerized applications on **Amazon ECS with AWS Fargate** delivers
 * [AWS Documentation - Amazon Elastic Container Service (ECS) Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 * [AWS Documentation - Getting Started with Amazon ECS using AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html)
 * [AWS Documentation - Amazon ECS Task Networking for Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-task-networking.html)
-* [AWS Prescriptive Guidance - Best practices for Amazon ECS and AWS Fargate](https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-modernizing-applications-amazon-ecs/)
 
 **Hashtags:** `#AWS` `#AmazonECS` `#AWSFargate` `#Docker` `#AmazonECR` `#CloudComputing` `#DevOps` `#awsstudygroup` `#FCAJ`
+

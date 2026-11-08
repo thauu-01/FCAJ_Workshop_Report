@@ -8,6 +8,8 @@ pre: " <b> 3.1. </b> "
 
 # Hosting Static Websites on Amazon S3: From Basic Deployment to CloudFront & OAC Security
 
+> 🔗 **Published on AWS Study Group Community:** [View original Facebook post](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2320770352021257/)
+
 After completing a modern frontend application using React (or Vue, Angular), the next critical milestone is selecting an optimal deployment architecture that satisfies key engineering requirements: **minimal operational cost, high performance, robust security, and seamless scalability**.
 
 For Single Page Applications (SPA) consisting exclusively of compiled HTML, CSS, JavaScript, and static assets, provisioning and maintaining dedicated virtual servers (such as VPS or Amazon EC2) or web servers (Nginx/Apache) incurs unnecessary maintenance overhead and financial expense. **Amazon S3 combined with Amazon CloudFront** represents the industry-standard serverless paradigm for static web hosting.
@@ -253,6 +255,7 @@ The architectural pairing of **Amazon S3 Private Bucket** with **Amazon CloudFro
 * [AWS Documentation - Request and response behavior for Amazon S3 origins](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorS3Origin.html)
 
 **Hashtags:** `#AWS` `#AmazonS3` `#CloudFront` `#OAC` `#StaticWebsite` `#ReactSPA` `#awsstudygroup` `#FCAJ`
+
 
 
 

@@ -8,6 +8,8 @@ pre: " <b> 3.1. </b> "
 
 # Host website tĩnh trên Amazon S3: Từ triển khai cơ bản đến bảo mật với CloudFront
 
+> 🔗 **Bài viết đã đăng trên cộng đồng AWS Study Group:** [Xem bài viết gốc trên Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2320770352021257/)
+
 Sau khi hoàn thành một ứng dụng frontend bằng React (hoặc Vue, Angular), bước tiếp theo là lựa chọn giải pháp triển khai (deployment) phù hợp, đáp ứng đầy đủ các tiêu chuẩn về **chi phí tối ưu, hiệu năng cao, bảo mật vững chắc và khả năng mở rộng linh hoạt**.
 
 Đối với những ứng dụng Single Page Application (SPA) chỉ bao gồm HTML, CSS, JavaScript và các tài nguyên tĩnh sau khi build, việc thuê một máy chủ ảo (VPS/EC2) hay tự duy trì một web server (Nginx/Apache) là không thực sự cần thiết và gây lãng phí chi phí vận hành. **Amazon S3 kết hợp cùng Amazon CloudFront** chính là giải pháp serverless tối ưu hàng đầu được ưa chuộng trong ngành.
@@ -262,6 +264,7 @@ Amazon S3 kết hợp cùng Amazon CloudFront và OAC là một giải pháp tri
 * [AWS Documentation - Request and response behavior for Amazon S3 origins](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorS3Origin.html)
 
 **Hashtags:** `#AWS` `#AmazonS3` `#CloudFront` `#OAC` `#StaticWebsite` `#ReactSPA` `#awsstudygroup` `#FCAJ`
+
 
 
 
