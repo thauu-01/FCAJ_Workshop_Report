@@ -2,7 +2,12 @@
 {{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
 <img src="{{ $url }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} />
 {{- else -}}
-{{- $cleanUrl := strings.TrimPrefix "/static/" $url -}}
-{{- $cleanUrl = strings.TrimPrefix "static/" $cleanUrl -}}
+  {{- $res := .Page.Resources.GetMatch .Destination -}}
+  {{- if $res -}}
+<img src="{{ $res.RelPermalink }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} />
+  {{- else -}}
+    {{- $cleanUrl := strings.TrimPrefix "/static/" $url -}}
+    {{- $cleanUrl = strings.TrimPrefix "static/" $cleanUrl -}}
 <img src="{{ $cleanUrl | relURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} />
+  {{- end -}}
 {{- end -}}
