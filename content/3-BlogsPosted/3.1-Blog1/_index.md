@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 1: Host Static Websites on Amazon S3 & CloudFront"
 date: 2026-10-16
 weight: 1

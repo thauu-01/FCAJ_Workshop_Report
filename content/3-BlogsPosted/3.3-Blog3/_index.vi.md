@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 3: Xây dựng Serverless REST API với Lambda, API Gateway & DynamoDB"
 date: 2026-11-08
 weight: 3

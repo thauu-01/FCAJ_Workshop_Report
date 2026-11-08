@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 2: Deploying Docker on Amazon ECS & AWS Fargate"
 date: 2026-11-24
 weight: 2

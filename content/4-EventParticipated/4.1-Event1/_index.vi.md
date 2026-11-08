@@ -1,125 +1,85 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Event 1: Kickoff FCAJ Buildrathon 2026"
+date: 2026-09-26
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo cáo tham gia sự kiện: Kickoff FCAJ Buildrathon 2026 (Season 01)
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Thông tin tổng quan sự kiện:
+* **Tên sự kiện:** KICKOFF FCAJ BUILDRATHON 2026 (SEASON 01): 300+ BUILDERS "BÙNG NỔ" TẠI VĂN PHÒNG AWS!
+* **Chủ đề chính (Talkshow):** "The Thinking Behind Building The Bot" (Đồng hành cùng CMC Global)
+* **Thời gian tổ chức:** 08:30 - 12:00, Thứ Bảy, ngày 26/09/2026
+* **Địa điểm:** Văn phòng AWS Việt Nam, Tầng 26, Tòa nhà Bitexco Financial Tower, Số 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh
+* **Đơn vị tổ chức:** AWS Study Group phối hợp cùng CMC Global
+* **Quy mô sự kiện:** Hơn 300 thành viên, kỹ sư, sinh viên và builders đam mê công nghệ Cloud & AI
+* **Vai trò tham dự:** Người tham dự (Participant / Builder)
 
-### Mục Đích Của Sự Kiện
+---
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+## 1. Mục đích và Ý nghĩa của sự kiện
 
-### Danh Sách Diễn Giả
+Sự kiện Kickoff là phát súng mở màn chính thức cho hành trình **FCAJ Buildrathon 2026 Season 01** – một sân chơi thực chiến kéo dài 6 tháng đầy thử thách và đột phá dành riêng cho cộng đồng AI & Cloud tại Việt Nam.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+Mục tiêu chính của buổi Kickoff bao gồm:
+1. **Khởi động sân chơi công nghệ:** Giới thiệu thể lệ, lộ trình thử thách 6 tháng và truyền cảm hứng đổi mới sáng tạo cho các đội thi.
+2. **Tiếp cận tư duy AI Agent thực chiến:** Chia sẻ phương pháp luận đặt nền móng kiến trúc cho một hệ thống AI Bot/Agent hoàn chỉnh trong môi trường doanh nghiệp.
+3. **Mổ xẻ các thử thách kỹ thuật:** Trực tiếp phân tích các bài toán thực tế hóc búa cùng các chuyên gia giải pháp hàng đầu.
+4. **Kết nối nghề nghiệp (Fast-track career):** Mở ra cơ hội giao lưu, kết nối 1-1 trực tiếp cùng đội ngũ chuyên gia nhân sự (HR) của CMC Global.
+5. **Lan tỏa văn hóa cộng đồng:** Tiếp nối và phát huy tinh thần **"Pay It Forward"** rực lửa của đại gia đình AWS Study Group.
 
-### Nội Dung Nổi Bật
+---
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+## 2. Nội dung nổi bật tại sự kiện
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Sự kiện diễn ra với không khí vô cùng sôi động và nhiệt huyết tại Văn phòng AWS Việt Nam với các phiên thảo luận chuyên sâu:
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+### 2.1. Talkshow "The Thinking Behind Building The Bot"
+Buổi tọa đàm với sự góp mặt của các chuyên gia công nghệ từ AWS Study Group và CMC Global đã mang lại nhiều góc nhìn sâu sắc:
+* **Tư duy thiết kế AI Agent thực tế:** Làm rõ sự khác biệt giữa một Chatbot đơn thuần và một AI Agent tự hành có khả năng suy luận, lập kế hoạch và gọi công cụ (Tool calling / Function calling).
+* **Kiến trúc nền tảng:** Hướng dẫn cách xây dựng kiến trúc mở rộng cho Bot, kết hợp giữa mô hình ngôn ngữ lớn (LLM), kỹ thuật Retrieval-Augmented Generation (RAG) và cơ sở hạ tầng đám mây AWS.
+* **Tối ưu hóa bài toán doanh nghiệp:** Phân tích các tiêu chí cân bằng giữa độ chính xác, độ trễ phản hồi (latency) và chi phí vận hành (token cost) khi triển khai cho khách hàng doanh nghiệp quy mô lớn.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+### 2.2. Giải mã thử thách kỹ thuật (Challenge Breakdown)
+* Các chuyên gia đã trực tiếp "mổ xẻ" các bài test kỹ thuật mẫu của cuộc thi Buildrathon.
+* Hướng dẫn cách phân tích yêu cầu nghiệp vụ, xác định các trường hợp biên (edge cases) và cách tiếp cận "học thật, va chạm thật" với các công nghệ đám mây tiên tiến.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+### 2.3. Fast-track Career – Kết nối cùng CMC Global
+* Cơ hội trao đổi trực tiếp với dàn HR và kỹ sư cấp cao của CMC Global ngay tại sự kiện.
+* Nắm bắt nhu cầu tuyển dụng thực tế đối với các vị trí Cloud Engineer, AI Engineer và những kỹ năng cốt lõi mà doanh nghiệp công nghệ hàng đầu tìm kiếm ở các ứng viên trẻ.
 
-#### Domain-Driven Design (DDD)
+---
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+## 3. Kiến thức và Giá trị thu nhận được
 
-#### Event-Driven Architecture
+Tham gia buổi Kickoff tại Văn phòng AWS đã mang lại cho tôi nhiều giá trị và trải nghiệm thực tế quý báu:
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+### 3.1. Về tư duy công nghệ & Kiến trúc hệ thống
+* **Tư duy hướng sản phẩm (Product Mindset):** Khi xây dựng Bot/AI Agent, công nghệ chỉ là công cụ hỗ trợ; điều quan trọng nhất là giải quyết đúng nỗi đau (pain point) của người dùng và mang lại giá trị thực tế.
+* **Nền tảng kiến trúc vững chắc:** Nắm được quy trình thiết kế bot chuẩn chỉnh từ khâu định hình hành vi, quản lý ngữ cảnh hội thoại, đến tích hợp an toàn với các dịch vụ dữ liệu trên Cloud.
 
-#### Compute Evolution
+### 3.2. Về kỹ năng mềm và Định hướng nghề nghiệp
+* **Mở rộng mối quan hệ (Networking):** Được giao lưu, học hỏi kinh nghiệm cùng hơn 300 builders tài năng trong cộng đồng AWS Study Group.
+* **Hiểu rõ yêu cầu thị trường:** Nhận được những lời khuyên định hướng nghề nghiệp thiết thực từ các anh chị HR CMC Global, giúp tôi xác định rõ hơn lộ trình rèn luyện chuyên môn trong giai đoạn thực tập.
+* **Tiếp thêm động lực học tập:** Tinh thần chia sẻ vô điều kiện ("Pay It Forward") của các anh chị Admin và diễn giả đã tiếp thêm 200% năng lượng để tôi sẵn sàng đối đầu với những thử thách công nghệ mới.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+---
 
-#### Amazon Q Developer
+## 4. Hình ảnh minh chứng tham gia sự kiện
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+### 4.1. Báo cáo tình trạng Check-in trên Hệ thống Portal
+* **Thời gian quy định:** Ca sáng (Shift 9:00 AM), khung giờ check-in từ **08:30 - 09:00**, ngày **26/09/2026** tại Tầng 26 Bitexco.
+* **Sự cố kỹ thuật gặp phải:** Khi tôi có mặt tại văn phòng AWS và thực hiện thao tác check-in trên hệ thống cổng điện tử sinh viên `hcm-portal.awsfcaj.com`, hệ thống đã phát sinh lỗi kỹ thuật máy chủ và hiển thị thông báo:
+  > *"Failed to check in: Request failed with status code 404"*
+* Dưới đây là ảnh chụp màn hình ghi nhận lỗi trực tiếp tại thời điểm đó:
 
-### Những Gì Học Được
+![Lỗi 404 khi Check-in trên Portal](images/event1-checkin-error.jpg)
 
-#### Tư Duy Thiết Kế
+---
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+### 4.2. Ảnh chụp chứng minh tham gia thực tế tại Văn phòng AWS
+Để đảm bảo tính minh bạch và xác thực sự hiện diện tại sự kiện, dưới đây là ảnh chụp cá nhân của tôi (Nguyễn Trung Hậu) trực tiếp tại khán phòng hội thảo Văn phòng AWS Việt Nam (Tầng 26 Bitexco Tower), đeo thẻ dây tham dự sự kiện chính thức cùng các bạn thành viên cộng đồng:
 
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+![Ảnh chứng minh tham gia sự kiện Kickoff tại Văn phòng AWS](images/event1-proof.jpg)

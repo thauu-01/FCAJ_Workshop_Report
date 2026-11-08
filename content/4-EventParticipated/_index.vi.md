@@ -1,46 +1,36 @@
 ---
 title: "Các events đã tham gia"
-date: 2024-01-01
+date: 2026-09-26
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Trong suốt quá trình thực tập tại chương trình AWS First Cloud Journey (FCJ), việc tham gia các sự kiện công nghệ và hội thảo chuyên đề đóng vai trò rất quan trọng trong việc mở rộng góc nhìn kiến trúc thực tế, tiếp cận các xu hướng công nghệ tiên tiến trên nền tảng AWS, đồng thời nâng cao kỹ năng mềm và mở rộng mạng lưới quan hệ trong cộng đồng công nghệ.
 
-> Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
+Dưới đây là các sự kiện tiêu biểu mà tôi đã tham gia trong thời gian qua:
 
+---
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+### [Event 1: Kickoff FCAJ Buildrathon 2026 (Season 01)](4.1-Event1/)
 
-### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+* **Tên sự kiện:** KICKOFF FCAJ BUILDRATHON 2026 (SEASON 01): 300+ BUILDERS "BÙNG NỔ" TẠI VĂN PHÒNG AWS!
+* **Chủ đề chính (Talkshow):** *"The Thinking Behind Building The Bot"* (Đồng hành cùng CMC Global)
+* **Thời gian:** 08:30 - 12:00, Thứ Bảy, ngày 26/09/2026
+* **Địa điểm:** Văn phòng AWS Việt Nam, Tầng 26, Bitexco Financial Tower, Số 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh
+* **Đơn vị tổ chức:** AWS Study Group phối hợp cùng CMC Global
+* **Vai trò:** Người tham dự (Participant / Builder)
+* **Nội dung nổi bật:** 
+  - Khởi động hành trình 6 tháng sân chơi thực chiến FCAJ Buildrathon 2026.
+  - Phân tích tư duy kiến trúc AI Agent thực chiến và bài toán tối ưu Bot trong môi trường doanh nghiệp.
+  - Mổ xẻ các bài test kỹ thuật thực tế và kết nối cơ hội nghề nghiệp 1-1 với đội ngũ CMC Global.
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+---
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+### [Event 2: GenAI-powered App-DB Modernization Workshop](4.2-Event2/)
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
-
-
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
-
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
+* **Tên sự kiện:** GenAI-powered App-DB Modernization Workshop
+* **Thời gian:** 09:00, ngày 13/08/2025
+* **Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Số 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh
+* **Vai trò:** Người tham dự
+* **Nội dung nổi bật:** Tiếp cận các phương pháp hiện đại hóa ứng dụng và cơ sở dữ liệu với GenAI, thiết kế kiến trúc vi dịch vụ hướng sự kiện (EDA) và Domain-Driven Design (DDD).

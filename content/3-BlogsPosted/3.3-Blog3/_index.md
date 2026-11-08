@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 3: Building a Serverless REST API with Lambda, API Gateway & DynamoDB"
 date: 2026-11-08
 weight: 3
