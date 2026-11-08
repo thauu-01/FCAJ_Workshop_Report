@@ -1,6 +1,6 @@
 ---
 title: "Các events đã tham gia"
-date: 2026-09-26
+date: 2026-10-24
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
@@ -27,10 +27,15 @@ Dưới đây là các sự kiện tiêu biểu mà tôi đã tham gia trong th�
 
 ---
 
-### [Event 2: GenAI-powered App-DB Modernization Workshop](4.2-Event2/)
+### [Event 2: Meetup First Cloud AI Journey](4.2-Event2/)
 
-* **Tên sự kiện:** GenAI-powered App-DB Modernization Workshop
-* **Thời gian:** 09:00, ngày 13/08/2025
-* **Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Số 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh
-* **Vai trò:** Người tham dự
-* **Nội dung nổi bật:** Tiếp cận các phương pháp hiện đại hóa ứng dụng và cơ sở dữ liệu với GenAI, thiết kế kiến trúc vi dịch vụ hướng sự kiện (EDA) và Domain-Driven Design (DDD).
+* **Tên sự kiện:** BUỔI MEET UP ĐẦY NĂNG LƯỢNG: FIRST CLOUD AI JOURNEY (24/10/2026)
+* **Thời gian:** 09:00 - 12:00 AM, Thứ Bảy, ngày 24/10/2026
+* **Địa điểm:** Văn phòng AWS Việt Nam, Tầng 26, Tòa nhà Bitexco Financial Tower, Số 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh
+* **Đơn vị tổ chức:** AWS Study Group phối hợp cùng Cộng đồng First Cloud AI Journey (FCAJ)
+* **Vai trò:** Người tham dự (Participant / Builder)
+* **Nội dung nổi bật:** 
+  - Trải nghiệm 5 sessions kỹ thuật chuyên sâu cùng các Tech Lead và chuyên gia doanh nghiệp.
+  - Khám phá giải pháp Voice AI tiếng Việt với độ trễ ~1.8s; quản trị tài nguyên an toàn với AWS RAM và SCPs.
+  - Tự động hóa Pentest với Security Agent trên CI/CD; tối ưu chi phí Bedrock Agent bằng EC2 Spot MicroVMs.
+  - Vận hành AI Agent Kiro Crew 24/7 với cơ chế Auto Compact ngữ cảnh và thiết lập Guardrails an ninh tuyệt đối.
