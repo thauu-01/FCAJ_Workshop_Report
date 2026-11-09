@@ -30,7 +30,7 @@ pre: " <b> 1.2. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Thiết kế & Triển khai kiến trúc mạng Custom Multi-Tier VPC
-Trong bài lab này, tôi đã khởi tạo một Custom VPC (`10.0.0.0/16`) bao gồm 2 Public Subnets và 2 Private Subnets trải đều trên 2 Availability Zones. Tôi cấu hình 1 Internet Gateway cho Public Route Table và 1 NAT Gateway cho Private Route Table. Hệ thống máy chủ Web được đặt tại Public Subnet trong khi Database Server được cô lập an toàn trong Private Subnet, cho phép quản trị an toàn thông qua mô hình Bastion Host (Jump Box).
+Trong bài lab này, em đã khởi tạo một Custom VPC (`10.0.0.0/16`) bao gồm 2 Public Subnets và 2 Private Subnets trải đều trên 2 Availability Zones. Em cấu hình 1 Internet Gateway cho Public Route Table và 1 NAT Gateway cho Private Route Table. Hệ thống máy chủ Web được đặt tại Public Subnet trong khi Database Server được cô lập an toàn trong Private Subnet, cho phép quản trị an toàn thông qua mô hình Bastion Host (Jump Box).
 
 ---
 

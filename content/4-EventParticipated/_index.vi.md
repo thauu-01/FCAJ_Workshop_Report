@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 Trong suốt quá trình thực tập tại chương trình AWS First Cloud Journey (FCJ), việc tham gia các sự kiện công nghệ và hội thảo chuyên đề đóng vai trò rất quan trọng trong việc mở rộng góc nhìn kiến trúc thực tế, tiếp cận các xu hướng công nghệ tiên tiến trên nền tảng AWS, đồng thời nâng cao kỹ năng mềm và mở rộng mạng lưới quan hệ trong cộng đồng công nghệ.
 
-Dưới đây là các sự kiện tiêu biểu mà tôi đã tham gia trong thời gian qua:
+Dưới đây là các sự kiện tiêu biểu mà em đã tham gia trong thời gian qua:
 
 ---
 

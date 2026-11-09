@@ -30,7 +30,7 @@ pre: " <b> 1.5. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Xây dựng kiến trúc Web High Availability tự phục hồi với ALB & Auto Scaling
-Trong bài thực hành này, tôi đã xây dựng một hệ thống hoàn chỉnh có khả năng tự phục hồi và co giãn tự động. Hệ thống sử dụng một Application Load Balancer phân phối tải tới một Auto Scaling Group trải trên 2 Availability Zones. Khi chạy lệnh stress test đẩy tải CPU vượt 70%, CloudWatch Alarm đã kích hoạt chính sách Target Tracking Scaling để tự động khởi chạy thêm 2 EC2 instances mới, tự động đăng ký vào Target Group và tiếp nhận lưu lượng một cách liền mạch mà không làm gián đoạn người dùng.
+Trong bài thực hành này, em đã xây dựng một hệ thống hoàn chỉnh có khả năng tự phục hồi và co giãn tự động. Hệ thống sử dụng một Application Load Balancer phân phối tải tới một Auto Scaling Group trải trên 2 Availability Zones. Khi chạy lệnh stress test đẩy tải CPU vượt 70%, CloudWatch Alarm đã kích hoạt chính sách Target Tracking Scaling để tự động khởi chạy thêm 2 EC2 instances mới, tự động đăng ký vào Target Group và tiếp nhận lưu lượng một cách liền mạch mà không làm gián đoạn người dùng.
 
 ---
 

@@ -30,7 +30,7 @@ pre: " <b> 1.12. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Triển khai Đồ án Capstone 3-Tier Enterprise & Đánh giá AWS Well-Architected Framework
-Trong tuần cuối cùng, tôi đã thiết kế và triển khai thành công một giải pháp Cloud hoàn chỉnh đạt chuẩn doanh nghiệp (Enterprise 3-Tier Cloud Solution). Hệ thống kết hợp đầy đủ: CloudFront + S3 (Presentation Tier), Application Load Balancer + Amazon ECS Fargate Auto Scaling (Application Tier), và Amazon RDS MySQL Multi-AZ + ElastiCache (Database Tier) trong một Custom VPC cô lập chặt chẽ. Hệ thống được bảo vệ bởi AWS WAF và KMS, tự động hóa cập nhật mã nguồn bằng CI/CD CodePipeline và giám sát tập trung bởi CloudWatch. Tôi đã sử dụng công cụ AWS Well-Architected Tool để rà soát và tối ưu toàn diện đồ án.
+Trong tuần cuối cùng, em đã thiết kế và triển khai thành công một giải pháp Cloud hoàn chỉnh đạt chuẩn doanh nghiệp (Enterprise 3-Tier Cloud Solution). Hệ thống kết hợp đầy đủ: CloudFront + S3 (Presentation Tier), Application Load Balancer + Amazon ECS Fargate Auto Scaling (Application Tier), và Amazon RDS MySQL Multi-AZ + ElastiCache (Database Tier) trong một Custom VPC cô lập chặt chẽ. Hệ thống được bảo vệ bởi AWS WAF và KMS, tự động hóa cập nhật mã nguồn bằng CI/CD CodePipeline và giám sát tập trung bởi CloudWatch. Em đã sử dụng công cụ AWS Well-Architected Tool để rà soát và tối ưu toàn diện đồ án.
 
 ---
 

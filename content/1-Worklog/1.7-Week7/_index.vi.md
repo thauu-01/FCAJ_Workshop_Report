@@ -30,7 +30,7 @@ pre: " <b> 1.7. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Tự động hóa triển khai hạ tầng với CloudFormation/CDK & Quản trị không mở port với SSM
-Trong bài thực hành này, tôi đã lập trình toàn bộ hạ tầng đám mây bao gồm VPC, Subnets, EC2 và RDS bằng AWS CloudFormation và AWS CDK (TypeScript). Sau khi stack được khởi tạo tự động, tôi đã cấu hình máy chủ EC2 kết nối với AWS Systems Manager. Thay vì sử dụng SSH truyền thống, tôi đã thực hiện truy cập Shell thông qua SSM Session Manager trên trình duyệt mà không cần mở port 22, đồng thời quản lý các thông số cấu hình mật qua SSM Parameter Store.
+Trong bài thực hành này, em đã lập trình toàn bộ hạ tầng đám mây bao gồm VPC, Subnets, EC2 và RDS bằng AWS CloudFormation và AWS CDK (TypeScript). Sau khi stack được khởi tạo tự động, em đã cấu hình máy chủ EC2 kết nối với AWS Systems Manager. Thay vì sử dụng SSH truyền thống, em đã thực hiện truy cập Shell thông qua SSM Session Manager trên trình duyệt mà không cần mở port 22, đồng thời quản lý các thông số cấu hình mật qua SSM Parameter Store.
 
 ---
 

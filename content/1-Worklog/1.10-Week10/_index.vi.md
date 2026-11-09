@@ -30,7 +30,7 @@ pre: " <b> 1.10. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Thiết lập bảo vệ đa lớp với AWS KMS, Secrets Manager, AWS WAF & Security Hub
-Trong bài thực hành này, tôi đã triển khai chiến lược bảo mật toàn diện cho hệ thống. Toàn bộ cơ sở dữ liệu và ổ đĩa được mã hóa bằng khóa tùy chỉnh AWS KMS CMK. Thông tin mật khẩu database được lưu trong AWS Secrets Manager và thiết lập cơ chế tự động xoay vòng định kỳ. Ở lớp ngoài cùng, tôi đã cấu hình AWS WAF Web ACL gắn trực tiếp vào Application Load Balancer để ngăn chặn các cuộc tấn công web theo OWASP Top 10 (SQLi, XSS) và kích hoạt Amazon GuardDuty cùng AWS Security Hub để giám sát tuân thủ an toàn liên tục.
+Trong bài thực hành này, em đã triển khai chiến lược bảo mật toàn diện cho hệ thống. Toàn bộ cơ sở dữ liệu và ổ đĩa được mã hóa bằng khóa tùy chỉnh AWS KMS CMK. Thông tin mật khẩu database được lưu trong AWS Secrets Manager và thiết lập cơ chế tự động xoay vòng định kỳ. Ở lớp ngoài cùng, em đã cấu hình AWS WAF Web ACL gắn trực tiếp vào Application Load Balancer để ngăn chặn các cuộc tấn công web theo OWASP Top 10 (SQLi, XSS) và kích hoạt Amazon GuardDuty cùng AWS Security Hub để giám sát tuân thủ an toàn liên tục.
 
 ---
 

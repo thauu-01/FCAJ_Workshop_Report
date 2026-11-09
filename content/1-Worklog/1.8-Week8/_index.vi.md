@@ -30,7 +30,7 @@ pre: " <b> 1.8. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Đóng gói ứng dụng với Docker & Triển khai Microservices trên Amazon ECS Fargate
-Trong bài thực hành tuần này, tôi đã đóng gói một ứng dụng web microservice bằng Dockerfile tối ưu đa tầng (multi-stage), sau đó đẩy image lên Amazon ECR với tính năng quét lỗ hổng tự động. Tiếp theo, tôi cấu hình một ECS Cluster sử dụng AWS Fargate để chạy các containers mà hoàn toàn không cần quản lý máy chủ EC2 bên dưới. ECS Service được kết nối với Application Load Balancer để tự động phân phối tải và thực hiện cập nhật phiên bản ứng dụng theo cơ chế Rolling Update mượt mà không có downtime.
+Trong bài thực hành tuần này, em đã đóng gói một ứng dụng web microservice bằng Dockerfile tối ưu đa tầng (multi-stage), sau đó đẩy image lên Amazon ECR với tính năng quét lỗ hổng tự động. Tiếp theo, em cấu hình một ECS Cluster sử dụng AWS Fargate để chạy các containers mà hoàn toàn không cần quản lý máy chủ EC2 bên dưới. ECS Service được kết nối với Application Load Balancer để tự động phân phối tải và thực hiện cập nhật phiên bản ứng dụng theo cơ chế Rolling Update mượt mà không có downtime.
 
 ---
 

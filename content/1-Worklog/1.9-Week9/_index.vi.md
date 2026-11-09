@@ -30,7 +30,7 @@ pre: " <b> 1.9. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Xây dựng đường ống CI/CD tự động hoàn chỉnh với AWS CodePipeline & CodeBuild
-Trong bài thực hành tuần này, tôi đã thiết lập một đường ống CI/CD tự động hóa end-to-end với AWS CodePipeline. Khi có commit mới được đẩy lên nhánh `main`, CodePipeline tự động tải mã nguồn, chuyển tiếp tới AWS CodeBuild để cài đặt dependencies, chạy các bài unit test tự động và đóng gói Docker image với thẻ commit SHA. Sau khi image được đẩy thành công lên Amazon ECR, CodePipeline kích hoạt bước deploy để cập nhật Task Definition của dịch vụ Amazon ECS Fargate mà không làm gián đoạn người dùng.
+Trong bài thực hành tuần này, em đã thiết lập một đường ống CI/CD tự động hóa end-to-end với AWS CodePipeline. Khi có commit mới được đẩy lên nhánh `main`, CodePipeline tự động tải mã nguồn, chuyển tiếp tới AWS CodeBuild để cài đặt dependencies, chạy các bài unit test tự động và đóng gói Docker image với thẻ commit SHA. Sau khi image được đẩy thành công lên Amazon ECR, CodePipeline kích hoạt bước deploy để cập nhật Task Definition của dịch vụ Amazon ECS Fargate mà không làm gián đoạn người dùng.
 
 ---
 

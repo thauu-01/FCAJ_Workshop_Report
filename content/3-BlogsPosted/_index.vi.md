@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-Dưới đây là danh sách các bài viết kỹ thuật chuyên sâu về các dịch vụ điện toán đám mây AWS mà tôi đã biên soạn và chia sẻ trên cộng đồng [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj):
+Dưới đây là danh sách các bài viết kỹ thuật chuyên sâu về các dịch vụ điện toán đám mây AWS mà em đã biên soạn và chia sẻ trên cộng đồng [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj):
 
 ---
 

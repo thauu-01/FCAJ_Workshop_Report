@@ -30,7 +30,7 @@ pre: " <b> 1.1. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Khởi tạo tài khoản AWS an toàn & Triển khai máy chủ Amazon EC2
-Trong bài thực hành tuần đầu tiên, tôi đã thực hiện thiết lập bảo mật cấp cao cho AWS Root Account bằng Virtual MFA, tạo IAM Admin Group có chính sách kiểm soát chặt chẽ và tắt toàn bộ Access Key của tài khoản Root. Tiếp theo, tôi cấu hình AWS CLI v2 trên máy trạm cá nhân và dùng lệnh CLI để khởi chạy một máy chủ ảo EC2 chạy Amazon Linux 2023 kèm EBS Volume (gp3), gán Key Pair bảo mật và kết nối thành công qua SSH.
+Trong bài thực hành tuần đầu tiên, em đã thực hiện thiết lập bảo mật cấp cao cho AWS Root Account bằng Virtual MFA, tạo IAM Admin Group có chính sách kiểm soát chặt chẽ và tắt toàn bộ Access Key của tài khoản Root. Tiếp theo, em cấu hình AWS CLI v2 trên máy trạm cá nhân và dùng lệnh CLI để khởi chạy một máy chủ ảo EC2 chạy Amazon Linux 2023 kèm EBS Volume (gp3), gán Key Pair bảo mật và kết nối thành công qua SSH.
 
 ---
 

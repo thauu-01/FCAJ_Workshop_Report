@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Trang này tổng hợp toàn bộ quá trình học tập, nghiên cứu và thực hành của tôi trong **12 tuần** tham gia chương trình thực tập **First Cloud AI Journey (FCAJ)**. Trong suốt chương trình, tôi đã tiếp cận và làm chủ các dịch vụ cốt lõi của **Amazon Web Services (AWS)**, hoàn thành các bài thực hành chuyên sâu (hands-on labs), đồng thời từng bước xây dựng kỹ năng thiết kế, triển khai và tối ưu hóa hệ thống Cloud đạt tiêu chuẩn AWS Well-Architected Framework.
+Trang này tổng hợp toàn bộ quá trình học tập, nghiên cứu và thực hành của em trong **12 tuần** tham gia chương trình thực tập **First Cloud AI Journey (FCAJ)**. Trong suốt chương trình, em đã tiếp cận và làm chủ các dịch vụ cốt lõi của **Amazon Web Services (AWS)**, hoàn thành các bài thực hành chuyên sâu (hands-on labs), đồng thời từng bước xây dựng kỹ năng thiết kế, triển khai và tối ưu hóa hệ thống Cloud đạt tiêu chuẩn AWS Well-Architected Framework.
 
 ### Lộ trình đào tạo 12 tuần:
 

@@ -78,16 +78,16 @@ Tuy thời lượng diễn ra trong buổi sáng thứ Bảy, sự kiện đã c
 
 ## 3. Kiến thức và Giá trị thu nhận được
 
-Buổi meetup đã mang lại cho tôi những bước chuyển biến lớn về cả tư duy kỹ thuật lẫn định hướng phát triển nghề nghiệp:
+Buổi meetup đã mang lại cho em những bước chuyển biến lớn về cả tư duy kỹ thuật lẫn định hướng phát triển nghề nghiệp:
 
 1. **Hiểu rõ bài toán thực tế của doanh nghiệp:** Khác với các bài thực hành lý thuyết trên giảng đường, việc đưa Cloud và GenAI/Agent vào doanh nghiệp đòi hỏi giải quyết đồng thời các bài toán về: độ trễ đàm thoại, chi phí token, an toàn đa tài khoản và rào chắn an ninh nghiêm ngặt.
 2. **Khai phá tiềm năng của AI Agent tự hành:** Nắm bắt được những kiến trúc tiên tiến nhất như bộ nhớ phân tầng, cơ chế Auto Compact ngữ cảnh và kiểm thử an ninh tự động bằng Agent.
-3. **Mở rộng giao lưu và truyền cảm hứng:** Được lắng nghe chia sẻ từ các Tech Lead hàng đầu giúp tôi tự tin hơn trong việc kết nối, chủ động giao lưu, học hỏi và nỗ lực nâng cao chuyên môn để sẵn sàng cho các dự án thực tế trên nền tảng AWS.
+3. **Mở rộng giao lưu và truyền cảm hứng:** Được lắng nghe chia sẻ từ các Tech Lead hàng đầu giúp em tự tin hơn trong việc kết nối, chủ động giao lưu, học hỏi và nỗ lực nâng cao chuyên môn để sẵn sàng cho các dự án thực tế trên nền tảng AWS.
 
 ---
 
 ## 4. Hình ảnh minh chứng tham gia sự kiện
 
-Dưới đây là hình ảnh cá nhân của tôi (Nguyễn Trung Hậu) chụp trực tiếp tại khán phòng hội thảo Văn phòng AWS Việt Nam (Tầng 26 Bitexco Financial Tower) trong buổi Meetup **First Cloud AI Journey** ngày 24/10/2026:
+Dưới đây là hình ảnh cá nhân của em (Nguyễn Trung Hậu) chụp trực tiếp tại khán phòng hội thảo Văn phòng AWS Việt Nam (Tầng 26 Bitexco Financial Tower) trong buổi Meetup **First Cloud AI Journey** ngày 24/10/2026:
 
 ![Ảnh chứng minh tham gia sự kiện Meetup First Cloud AI Journey](images/event2-proof.jpg)

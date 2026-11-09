@@ -54,7 +54,7 @@ Buổi tọa đàm với sự góp mặt của các chuyên gia công nghệ t�
 
 ## 3. Kiến thức và Giá trị thu nhận được
 
-Tham gia buổi Kickoff tại Văn phòng AWS đã mang lại cho tôi nhiều giá trị và trải nghiệm thực tế quý báu:
+Tham gia buổi Kickoff tại Văn phòng AWS đã mang lại cho em nhiều giá trị và trải nghiệm thực tế quý báu:
 
 ### 3.1. Về tư duy công nghệ & Kiến trúc hệ thống
 * **Tư duy hướng sản phẩm (Product Mindset):** Khi xây dựng Bot/AI Agent, công nghệ chỉ là công cụ hỗ trợ; điều quan trọng nhất là giải quyết đúng nỗi đau (pain point) của người dùng và mang lại giá trị thực tế.
@@ -62,8 +62,8 @@ Tham gia buổi Kickoff tại Văn phòng AWS đã mang lại cho tôi nhiều g
 
 ### 3.2. Về kỹ năng mềm và Định hướng nghề nghiệp
 * **Mở rộng mối quan hệ (Networking):** Được giao lưu, học hỏi kinh nghiệm cùng hơn 300 builders tài năng trong cộng đồng AWS Study Group.
-* **Hiểu rõ yêu cầu thị trường:** Nhận được những lời khuyên định hướng nghề nghiệp thiết thực từ các anh chị HR CMC Global, giúp tôi xác định rõ hơn lộ trình rèn luyện chuyên môn trong giai đoạn thực tập.
-* **Tiếp thêm động lực học tập:** Tinh thần chia sẻ vô điều kiện ("Pay It Forward") của các anh chị Admin và diễn giả đã tiếp thêm 200% năng lượng để tôi sẵn sàng đối đầu với những thử thách công nghệ mới.
+* **Hiểu rõ yêu cầu thị trường:** Nhận được những lời khuyên định hướng nghề nghiệp thiết thực từ các anh chị HR CMC Global, giúp em xác định rõ hơn lộ trình rèn luyện chuyên môn trong giai đoạn thực tập.
+* **Tiếp thêm động lực học tập:** Tinh thần chia sẻ vô điều kiện ("Pay It Forward") của các anh chị Admin và diễn giả đã tiếp thêm năng lượng để em sẵn sàng đối đầu với những thử thách công nghệ mới.
 
 ---
 
@@ -71,7 +71,7 @@ Tham gia buổi Kickoff tại Văn phòng AWS đã mang lại cho tôi nhiều g
 
 ### 4.1. Báo cáo tình trạng Check-in trên Hệ thống Portal
 * **Thời gian quy định:** Ca sáng (Shift 9:00 AM), khung giờ check-in từ **08:30 - 09:00**, ngày **26/09/2026** tại Tầng 26 Bitexco.
-* **Sự cố kỹ thuật gặp phải:** Khi tôi có mặt tại văn phòng AWS và thực hiện thao tác check-in trên hệ thống cổng điện tử sinh viên `hcm-portal.awsfcaj.com`, hệ thống đã phát sinh lỗi kỹ thuật máy chủ và hiển thị thông báo:
+* **Sự cố kỹ thuật gặp phải:** Khi em có mặt tại văn phòng AWS và thực hiện thao tác check-in trên hệ thống cổng điện tử sinh viên `hcm-portal.awsfcaj.com`, hệ thống đã phát sinh lỗi kỹ thuật máy chủ và hiển thị thông báo:
   > *"Failed to check in: Request failed with status code 404"*
 * Dưới đây là ảnh chụp màn hình ghi nhận lỗi trực tiếp tại thời điểm đó:
 
@@ -80,6 +80,6 @@ Tham gia buổi Kickoff tại Văn phòng AWS đã mang lại cho tôi nhiều g
 ---
 
 ### 4.2. Ảnh chụp chứng minh tham gia thực tế tại Văn phòng AWS
-Để đảm bảo tính minh bạch và xác thực sự hiện diện tại sự kiện, dưới đây là ảnh chụp cá nhân của tôi (Nguyễn Trung Hậu) trực tiếp tại khán phòng hội thảo Văn phòng AWS Việt Nam (Tầng 26 Bitexco Tower), đeo thẻ dây tham dự sự kiện chính thức cùng các bạn thành viên cộng đồng:
+Để đảm bảo tính minh bạch và xác thực sự hiện diện tại sự kiện, dưới đây là ảnh chụp cá nhân của em (Nguyễn Trung Hậu) trực tiếp tại khán phòng hội thảo Văn phòng AWS Việt Nam (Tầng 26 Bitexco Tower), đeo thẻ dây tham dự sự kiện chính thức cùng các bạn thành viên cộng đồng:
 
 ![Ảnh chứng minh tham gia sự kiện Kickoff tại Văn phòng AWS](images/event1-proof.jpg)

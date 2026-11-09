@@ -30,7 +30,7 @@ pre: " <b> 1.3. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Triển khai Static Website toàn cầu tốc độ cao với S3, CloudFront & Route 53
-Trong bài thực hành này, tôi đã lưu trữ trang web tĩnh lên Amazon S3, kích hoạt Versioning và mã hóa SSE-S3. Sau đó, tôi cấu hình Amazon CloudFront Distribution với Origin Access Control (OAC) để bảo mật tuyệt đối cho bucket (chặn toàn bộ truy cập public trực tiếp vào S3). Cuối cùng, tôi tích hợp Route 53 và chứng chỉ SSL từ AWS Certificate Manager (ACM) để cung cấp trải nghiệm duyệt web HTTPS an toàn, tốc độ phản hồi cực nhanh từ các Edge Location gần nhất.
+Trong bài thực hành này, em đã lưu trữ trang web tĩnh lên Amazon S3, kích hoạt Versioning và mã hóa SSE-S3. Sau đó, em cấu hình Amazon CloudFront Distribution với Origin Access Control (OAC) để bảo mật tuyệt đối cho bucket (chặn toàn bộ truy cập public trực tiếp vào S3). Cuối cùng, em tích hợp Route 53 và chứng chỉ SSL từ AWS Certificate Manager (ACM) để cung cấp trải nghiệm duyệt web HTTPS an toàn, tốc độ phản hồi cực nhanh từ các Edge Location gần nhất.
 
 ---
 

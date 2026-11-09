@@ -30,7 +30,7 @@ pre: " <b> 1.11. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Thiết lập sao lưu tự động với AWS Backup & Tối ưu hóa chi phí với AWS Budgets
-Trong bài thực hành tuần 11, tôi đã cấu hình một Backup Plan tập trung trên AWS Backup để tự động tạo snapshot hàng ngày cho toàn bộ cụm máy chủ EC2 và Amazon RDS, đồng thời kích hoạt chính sách sao chép Cross-Region sang vùng dự phòng. Tôi cũng đã thực hành kịch bản giả lập sự cố và thực hiện khôi phục thành công dữ liệu từ Recovery Point. Về mặt quản trị tài chính, tôi gắn thẻ Cost Allocation Tags cho toàn bộ tài nguyên, thiết lập AWS Budgets gửi cảnh báo qua email khi chi phí vượt 80% ngưỡng định mức, và dọn dẹp các tài nguyên dư thừa theo gợi ý của Trusted Advisor.
+Trong bài thực hành tuần 11, em đã cấu hình một Backup Plan tập trung trên AWS Backup để tự động tạo snapshot hàng ngày cho toàn bộ cụm máy chủ EC2 và Amazon RDS, đồng thời kích hoạt chính sách sao chép Cross-Region sang vùng dự phòng. Em cũng đã thực hành kịch bản giả lập sự cố và thực hiện khôi phục thành công dữ liệu từ Recovery Point. Về mặt quản trị tài chính, em gắn thẻ Cost Allocation Tags cho toàn bộ tài nguyên, thiết lập AWS Budgets gửi cảnh báo qua email khi chi phí vượt 80% ngưỡng định mức, và dọn dẹp các tài nguyên dư thừa theo gợi ý của Trusted Advisor.
 
 ---
 

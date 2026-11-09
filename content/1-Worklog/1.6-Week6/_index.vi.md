@@ -30,7 +30,7 @@ pre: " <b> 1.6. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Xây dựng Serverless Event-Driven Order Processing API với Lambda, API Gateway & SQS/SNS
-Trong bài thực hành này, tôi đã thiết kế và triển khai một hệ thống xử lý đơn hàng hoàn toàn không máy chủ (Serverless). Hệ thống sử dụng Amazon API Gateway làm điểm tiếp nhận request HTTP POST `/orders`, kích hoạt AWS Lambda function để validate dữ liệu và lưu vào Amazon DynamoDB. Sau khi lưu thành công, Lambda gửi một thông điệp sự kiện tới Amazon SNS Topic, từ đó áp dụng mô hình Fan-out để phân phối song song tới Amazon SQS Queue phục vụ tác vụ gửi email hóa đơn và cập nhật tồn kho.
+Trong bài thực hành này, em đã thiết kế và triển khai một hệ thống xử lý đơn hàng hoàn toàn không máy chủ (Serverless). Hệ thống sử dụng Amazon API Gateway làm điểm tiếp nhận request HTTP POST `/orders`, kích hoạt AWS Lambda function để validate dữ liệu và lưu vào Amazon DynamoDB. Sau khi lưu thành công, Lambda gửi một thông điệp sự kiện tới Amazon SNS Topic, từ đó áp dụng mô hình Fan-out để phân phối song song tới Amazon SQS Queue phục vụ tác vụ gửi email hóa đơn và cập nhật tồn kho.
 
 ---
 

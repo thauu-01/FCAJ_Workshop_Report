@@ -30,7 +30,7 @@ pre: " <b> 1.4. </b> "
 ### Bài thực hành Hands-on Lab trọng tâm:
 
 #### Triển khai Amazon RDS MySQL Multi-AZ & Quản lý dữ liệu NoSQL với DynamoDB
-Trong bài lab tuần này, tôi đã tạo DB Subnet Group trên 2 Private Subnets và triển khai một Amazon RDS MySQL instance với cấu hình Multi-AZ để đảm bảo khả năng tự động chuyển đổi dự phòng (failover). Tôi kết nối an toàn từ EC2 thông qua MySQL client, tạo database và kiểm tra snapshot tự động. Tiếp đó, tôi thiết kế bảng dữ liệu DynamoDB quản lý thông tin phiên làm việc, thiết lập GSI để tối ưu hóa truy vấn và đánh giá độ trễ milisecond của NoSQL.
+Trong bài lab tuần này, em đã tạo DB Subnet Group trên 2 Private Subnets và triển khai một Amazon RDS MySQL instance với cấu hình Multi-AZ để đảm bảo khả năng tự động chuyển đổi dự phòng (failover). Em kết nối an toàn từ EC2 thông qua MySQL client, tạo database và kiểm tra snapshot tự động. Tiếp đó, em thiết kế bảng dữ liệu DynamoDB quản lý thông tin phiên làm việc, thiết lập GSI để tối ưu hóa truy vấn và đánh giá độ trễ milisecond của NoSQL.
 
 ---
 
